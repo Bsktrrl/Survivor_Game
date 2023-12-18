@@ -66,6 +66,10 @@ public class ChallengeCreator : MonoBehaviour
     [SerializeField] Sprite stat_AdvantageHunting;
     [SerializeField] Sprite stat_Survival;
 
+    [Header("Arrow Sprites")]
+    [SerializeField] Sprite requirement_Increasing;
+    [SerializeField] Sprite requirement_Decreasing;
+
     [Header("Lists")]
     public List<GameObject> requirementSlotList = new List<GameObject>();
     #endregion
@@ -114,6 +118,7 @@ public class ChallengeCreator : MonoBehaviour
         {
             //Instantiate a requirementSlot
             requirementSlotList.Add(Instantiate(requirementSlot_Prefab, requirementSlot_Parent.transform));
+            requirementSlot_Parent.GetComponent<VerticalLayoutGroup>().spacing = challenges_SO.requirementSlotList[index].spacing;
             RequirementSlot slot = requirementSlotList[requirementSlotList.Count - 1].GetComponent<RequirementSlot>();
 
             //Add Dice
@@ -142,6 +147,23 @@ public class ChallengeCreator : MonoBehaviour
             //Add Requirement
             slot.componentsList.Add(Instantiate(requirementText, slot.components_Parent.transform));
             slot.componentsList[slot.componentsList.Count - 1].GetComponent<TextMeshProUGUI>().text = challenges_SO.requirementSlotList[index].requirementSlots[i].requirement.ToString();
+
+            //Add Requirement Chaning
+            switch (challenges_SO.requirementSlotList[index].requirementSlots[i].requirementChange)
+            {
+                case requirementChange.None:
+                    break;
+
+                case requirementChange.Increasing:
+                    slot.componentsList[slot.componentsList.Count - 1].GetComponent<TextMeshProUGUI>().text += "<sprite=29>";
+                    break;
+                case requirementChange.Decreasing:
+                    slot.componentsList[slot.componentsList.Count - 1].GetComponent<TextMeshProUGUI>().text += "<sprite=30>";
+                    break;
+
+                default:
+                    break;
+            }
 
             //Check if adding "repeat"
             if (challenges_SO.requirementSlotList[index].requirementSlots[i].repeat > 0)
@@ -273,6 +295,8 @@ public class Challenge
 
     public bool isMerged;
 
+    public float spacing = 100;
+
     public List<RequirementSlotInfo> requirementSlots = new List<RequirementSlotInfo>();
 }
 
@@ -282,7 +306,16 @@ public class RequirementSlotInfo
     public dice diceType;
     public List<Stats> stats;
     public int requirement;
+    public requirementChange requirementChange;
     public int repeat;
 
     public float spacing;
+}
+
+public enum requirementChange
+{
+    None,
+
+    Increasing,
+    Decreasing
 }
