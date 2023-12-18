@@ -114,9 +114,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 148
-        width: 71
-        height: 74
+        y: 1000
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,10 +134,10 @@ TextureImporter:
       name: Skills_1
       rect:
         serializedVersion: 2
-        x: 71
-        y: 148
-        width: 71
-        height: 74
+        x: 500
+        y: 1000
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,10 +155,10 @@ TextureImporter:
       name: Skills_2
       rect:
         serializedVersion: 2
-        x: 142
-        y: 148
-        width: 71
-        height: 74
+        x: 1000
+        y: 1000
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,10 +176,10 @@ TextureImporter:
       name: Skills_3
       rect:
         serializedVersion: 2
-        x: 213
-        y: 148
-        width: 71
-        height: 74
+        x: 1500
+        y: 1000
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,10 +197,10 @@ TextureImporter:
       name: Skills_4
       rect:
         serializedVersion: 2
-        x: 284
-        y: 148
-        width: 71
-        height: 74
+        x: 2000
+        y: 1000
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,9 +219,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 74
-        width: 71
-        height: 74
+        y: 500
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,10 +239,10 @@ TextureImporter:
       name: Skills_6
       rect:
         serializedVersion: 2
-        x: 71
-        y: 74
-        width: 71
-        height: 74
+        x: 500
+        y: 500
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,10 +260,10 @@ TextureImporter:
       name: Skills_7
       rect:
         serializedVersion: 2
-        x: 142
-        y: 74
-        width: 71
-        height: 74
+        x: 1000
+        y: 500
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,10 +281,10 @@ TextureImporter:
       name: Skills_8
       rect:
         serializedVersion: 2
-        x: 213
-        y: 74
-        width: 71
-        height: 74
+        x: 1500
+        y: 500
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,10 +302,10 @@ TextureImporter:
       name: Skills_9
       rect:
         serializedVersion: 2
-        x: 284
-        y: 74
-        width: 71
-        height: 74
+        x: 2000
+        y: 500
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,8 +325,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 71
-        height: 74
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,10 +344,10 @@ TextureImporter:
       name: Skills_11
       rect:
         serializedVersion: 2
-        x: 71
+        x: 500
         y: 0
-        width: 71
-        height: 74
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,10 +365,10 @@ TextureImporter:
       name: Skills_12
       rect:
         serializedVersion: 2
-        x: 142
+        x: 1000
         y: 0
-        width: 71
-        height: 74
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -386,10 +386,10 @@ TextureImporter:
       name: Skills_13
       rect:
         serializedVersion: 2
-        x: 213
+        x: 1500
         y: 0
-        width: 71
-        height: 74
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -407,10 +407,10 @@ TextureImporter:
       name: Skills_14
       rect:
         serializedVersion: 2
-        x: 284
+        x: 2000
         y: 0
-        width: 71
-        height: 74
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

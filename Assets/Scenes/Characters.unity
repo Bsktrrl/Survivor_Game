@@ -336,8 +336,8 @@ RectTransform:
   m_GameObject: {fileID: 159364842}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 728408786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -411,8 +411,8 @@ RectTransform:
   m_GameObject: {fileID: 233327567}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 150476031}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -497,7 +497,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1191305579, guid: a8b3ad1534db9dd4eb60223c33211576, type: 3}
+  m_Sprite: {fileID: -1693139847, guid: a8b3ad1534db9dd4eb60223c33211576, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -982,8 +982,8 @@ RectTransform:
   m_GameObject: {fileID: 312922900}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1047173187}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1253,8 +1253,8 @@ RectTransform:
   m_GameObject: {fileID: 380015158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6932273}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1390,8 +1390,8 @@ RectTransform:
   m_GameObject: {fileID: 460109167}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1867548687}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1723,8 +1723,8 @@ RectTransform:
   m_GameObject: {fileID: 536418105}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 295078137}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1873,8 +1873,8 @@ RectTransform:
   m_GameObject: {fileID: 614698513}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 487390168}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2372,7 +2372,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 9
+  m_text: 500
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
   m_sharedMaterial: {fileID: 8559762881318531647, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
@@ -2409,7 +2409,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: -3.53
+  m_characterSpacing: -20.7
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -2468,8 +2468,8 @@ RectTransform:
   m_GameObject: {fileID: 761812436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 311239962}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2973,8 +2973,8 @@ RectTransform:
   m_GameObject: {fileID: 962643807}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 502963477}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3244,8 +3244,8 @@ RectTransform:
   m_GameObject: {fileID: 1139760933}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 277120182}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3721,8 +3721,8 @@ RectTransform:
   m_GameObject: {fileID: 1206739387}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 321741196}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4021,8 +4021,8 @@ RectTransform:
   m_GameObject: {fileID: 1365265174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 794381209}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4230,8 +4230,8 @@ RectTransform:
   m_GameObject: {fileID: 1439393091}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 439548423}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4347,7 +4347,9 @@ MonoBehaviour:
 
     <size=20%>
 
-    <size=100%>Grandma!!!'
+    <size=100%>Here
+    there will be an <sprite=28> ability that may change the whole game in this player''s
+    favor'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
   m_sharedMaterial: {fileID: 8559762881318531647, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
@@ -4374,7 +4376,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
+  m_fontSize: 62.75
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4741,7 +4743,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 63207cd42791a6841a3062c1770f9763, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 74654249baceddd44afa41eea7d0efee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4786,8 +4788,8 @@ RectTransform:
   m_GameObject: {fileID: 1681265745}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 866228018}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4995,8 +4997,8 @@ RectTransform:
   m_GameObject: {fileID: 1764749020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 101105881}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5304,7 +5306,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Johnny Fairplay
+  m_text: Tyson Apostol
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
   m_sharedMaterial: {fileID: 8559762881318531647, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
@@ -5994,12 +5996,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character_SO: {fileID: 11400000, guid: fc629217727cde14ca55c263762eb75c, type: 2}
-  name: Johnny Fairplay
-  image: {fileID: 21300000, guid: 63207cd42791a6841a3062c1770f9763, type: 3}
+  name: Tyson Apostol
+  image: {fileID: 21300000, guid: 74654249baceddd44afa41eea7d0efee, type: 3}
   season: 15
-  popularity: 9
-  ability: Grandma!!!
-  morale: 4
+  popularity: 500
+  ability: Here there will be an ability that may change the whole game in this player's
+    favor
+  morale: 10
   stat_Relationship: 3
   stat_Charisma: 3
   stat_Intuision: 3
