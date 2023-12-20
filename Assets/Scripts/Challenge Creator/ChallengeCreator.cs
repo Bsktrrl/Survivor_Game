@@ -33,6 +33,7 @@ public class ChallengeCreator : Singleton<ChallengeCreator>
     public GameObject breakSign;
     public GameObject requirementText;
     public GameObject repeatText;
+    public GameObject description;
 
     [Header("Dice Sprites")]
     [SerializeField] Sprite dice_1;
@@ -114,22 +115,34 @@ public class ChallengeCreator : Singleton<ChallengeCreator>
         //Set new RequirementSlots
         for (int i = 0; i < challenges_SO.requirementSlotList[index].requirementSlots.Count; i++)
         {
+            //Instantiate Description
+            requirementSlotList.Add(Instantiate(requirementSlot_Prefab, requirementSlot_Parent.transform));
+            RequirementSlot slot_1 = requirementSlotList[requirementSlotList.Count - 1].GetComponent<RequirementSlot>();
+
+            //Add text to Description
+            slot_1.componentsList.Add(Instantiate(description, slot_1.components_Parent.transform));
+            slot_1.componentsList[slot_1.componentsList.Count - 1].GetComponent<TextMeshProUGUI>().text = challenges_SO.requirementSlotList[index].requirementSlots[i].description;
+
+
+            //-----
+
+
             //Instantiate a requirementSlot
             requirementSlotList.Add(Instantiate(requirementSlot_Prefab, requirementSlot_Parent.transform));
             requirementSlot_Parent.GetComponent<VerticalLayoutGroup>().spacing = challenges_SO.requirementSlotList[index].spacing;
-            RequirementSlot slot = requirementSlotList[requirementSlotList.Count - 1].GetComponent<RequirementSlot>();
+            RequirementSlot slot_2 = requirementSlotList[requirementSlotList.Count - 1].GetComponent<RequirementSlot>();
 
             //Add Dice
-            slot.componentsList.Add(Instantiate(dice_Image, slot.components_Parent.transform));
-            slot.componentsList[slot.componentsList.Count - 1].GetComponent<Image>().sprite = SetDiceSprite(challenges_SO.requirementSlotList[index].requirementSlots[i].diceType);
+            slot_2.componentsList.Add(Instantiate(dice_Image, slot_2.components_Parent.transform));
+            slot_2.componentsList[slot_2.componentsList.Count - 1].GetComponent<Image>().sprite = SetDiceSprite(challenges_SO.requirementSlotList[index].requirementSlots[i].diceType);
 
-            AddSign(slot, ":");
+            AddSign(slot_2, ":");
 
             //Add amount of Stats
             for (int j = 0; j < challenges_SO.requirementSlotList[index].requirementSlots[i].stats.Count; j++)
             {
-                slot.componentsList.Add(Instantiate(stat_Image, slot.components_Parent.transform));
-                slot.componentsList[slot.componentsList.Count - 1].GetComponent<Image>().sprite = SetStatSprite(challenges_SO.requirementSlotList[index].requirementSlots[i].stats[j]);
+                slot_2.componentsList.Add(Instantiate(stat_Image, slot_2.components_Parent.transform));
+                slot_2.componentsList[slot_2.componentsList.Count - 1].GetComponent<Image>().sprite = SetStatSprite(challenges_SO.requirementSlotList[index].requirementSlots[i].stats[j]);
 
                 if ((j + 1) >= challenges_SO.requirementSlotList[index].requirementSlots[i].stats.Count)
                 {
@@ -137,14 +150,14 @@ public class ChallengeCreator : Singleton<ChallengeCreator>
                 }
                 else if (challenges_SO.requirementSlotList[index].requirementSlots[i].stats.Count > 1)
                 {
-                    AddSign(slot, "+");
+                    AddSign(slot_2, "+");
                 }
             }
-            AddSign(slot, ":");
+            AddSign(slot_2, ":");
 
             //Add Requirement
-            slot.componentsList.Add(Instantiate(requirementText, slot.components_Parent.transform));
-            slot.componentsList[slot.componentsList.Count - 1].GetComponent<TextMeshProUGUI>().text = challenges_SO.requirementSlotList[index].requirementSlots[i].requirement.ToString();
+            slot_2.componentsList.Add(Instantiate(requirementText, slot_2.components_Parent.transform));
+            slot_2.componentsList[slot_2.componentsList.Count - 1].GetComponent<TextMeshProUGUI>().text = challenges_SO.requirementSlotList[index].requirementSlots[i].requirement.ToString();
 
             //Add Requirement Chaning
             switch (challenges_SO.requirementSlotList[index].requirementSlots[i].requirementChange)
@@ -153,10 +166,10 @@ public class ChallengeCreator : Singleton<ChallengeCreator>
                     break;
 
                 case requirementChange.Increasing:
-                    slot.componentsList[slot.componentsList.Count - 1].GetComponent<TextMeshProUGUI>().text += "<sprite=29>";
+                    slot_2.componentsList[slot_2.componentsList.Count - 1].GetComponent<TextMeshProUGUI>().text += "<sprite=29>";
                     break;
                 case requirementChange.Decreasing:
-                    slot.componentsList[slot.componentsList.Count - 1].GetComponent<TextMeshProUGUI>().text += "<sprite=30>";
+                    slot_2.componentsList[slot_2.componentsList.Count - 1].GetComponent<TextMeshProUGUI>().text += "<sprite=30>";
                     break;
 
                 default:
@@ -166,14 +179,14 @@ public class ChallengeCreator : Singleton<ChallengeCreator>
             //Check if adding "repeat"
             if (challenges_SO.requirementSlotList[index].requirementSlots[i].repeat > 0)
             {
-                AddSign(slot, "|");
+                AddSign(slot_2, "|");
 
-                slot.componentsList.Add(Instantiate(repeatText, slot.components_Parent.transform));
-                slot.componentsList[slot.componentsList.Count - 1].GetComponent<TextMeshProUGUI>().text = "[" + challenges_SO.requirementSlotList[index].requirementSlots[i].repeat.ToString() + "]";
+                slot_2.componentsList.Add(Instantiate(repeatText, slot_2.components_Parent.transform));
+                slot_2.componentsList[slot_2.componentsList.Count - 1].GetComponent<TextMeshProUGUI>().text = "[" + challenges_SO.requirementSlotList[index].requirementSlots[i].repeat.ToString() + "]";
             }
 
             //Set size
-            slot.gameObject.GetComponent<HorizontalLayoutGroup>().spacing = challenges_SO.requirementSlotList[index].requirementSlots[i].spacing;
+            slot_2.gameObject.GetComponent<HorizontalLayoutGroup>().spacing = challenges_SO.requirementSlotList[index].requirementSlots[i].spacing;
         }
     }
 

@@ -13,9 +13,38 @@ MonoBehaviour:
   m_Name: Challenges_SO
   m_EditorClassIdentifier: Assembly-CSharp::Challenges_SO
   requirementSlotList:
-  - name: Hello
-    subName: 
-    ChallengeType_Image: {fileID: 0}
+  - name: A Bit Dinghy
+    subName: Try to win this challenge as fast as possible
+    ChallengeType_Image: {fileID: 21300000, guid: 80c2aced959896b4580e44ea6900ac0a, type: 3}
     isMerged: 0
     spacing: 0
-    requirementSlots: []
+    requirementSlots:
+    - description: You then need to only have one sentence to tell what will happen
+        to the next stage of the challenge. For if I write more than one line of
+        text, the text will get smaller. I can try to make tree lines of text, too
+        see if that helps
+      diceType: 3
+      stats: 0800000007000000
+      requirement: 14
+      requirementChange: 0
+      repeat: 0
+      spacing: -500
+    - description: You then need to only have one sentence to tell what will happen
+        to the next stage of the challenge. For if I write more than one line of
+        text, the text will get smaller
+      diceType: 3
+      stats: 0800000007000000
+      requirement: 14
+      requirementChange: 0
+      repeat: 0
+      spacing: -500
+    - description: Here is where the text will be written to show the player what
+        the challenge is all about.  need to fit it correctly on top of the challenge
+        kjdslak dsak dsa  dska dlsa dsal dsal lk dsal   dlska dsal  lkd sal l dksa 
+        dlksak  dsalk.
+      diceType: 3
+      stats: 0800000007000000
+      requirement: 14
+      requirementChange: 0
+      repeat: 0
+      spacing: -500

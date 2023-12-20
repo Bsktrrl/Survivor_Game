@@ -26,6 +26,8 @@ public class Challenge
 [Serializable]
 public class RequirementSlotInfo
 {
+    [TextArea(3, 10)] public string description;
+
     public dice diceType;
     public List<Stats> stats;
     public int requirement;
