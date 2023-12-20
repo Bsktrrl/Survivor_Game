@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class GameChanger_SO : ScriptableObject
+public class TribalCard_SO : ScriptableObject
 {
     public List<GameChanger> gameChangerList = new List<GameChanger>();
 }
@@ -13,5 +13,7 @@ public class GameChanger_SO : ScriptableObject
 public class GameChanger
 {
     public string name;
+    public Sprite image;
+
     [TextArea(5, 10)] public string description;
 }

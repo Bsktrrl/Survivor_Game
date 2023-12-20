@@ -14,4 +14,6 @@ public class Events
 {
     public string name;
     [TextArea(5, 10)] public string description;
+
+    public bool isMerged;
 }

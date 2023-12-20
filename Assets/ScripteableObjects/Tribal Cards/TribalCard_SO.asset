@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f6b4f731233c4146988afa560cfda24, type: 3}
-  m_Name: Game Changer_SO
+  m_Name: TribalCard_SO
   m_EditorClassIdentifier: 
   gameChangerList:
   - name: Test
+    image: {fileID: 21300000, guid: dc993467c1ac6b043a198d163bd28c1a, type: 3}
     description: Here is a new text to display what to be written.
-  - name: Test 2
+  - name: Test 2 Text for seeing two lines of text
+    image: {fileID: 21300000, guid: d19eb3d40ac0cb84a8b436c401a1f2b6, type: 3}
     description: Here is a new text to display what <sprite=17> to be written.

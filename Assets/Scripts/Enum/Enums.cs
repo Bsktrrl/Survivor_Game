@@ -107,3 +107,13 @@ public enum GamePhases
     ChallengePhase,
     TribalCouncilPhase
 }
+
+public enum Tier
+{
+    None,
+
+    Normal,
+    Rare,
+    Epic,
+    Legenday
+}

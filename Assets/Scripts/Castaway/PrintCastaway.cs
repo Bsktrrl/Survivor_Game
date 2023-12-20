@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PrintCastaway : MonoBehaviour
 {
-    [SerializeField] Character_SO character_SO;
+    [SerializeField] Castaway_SO character_SO;
 
     private void Update()
     {
@@ -29,17 +29,17 @@ public class PrintCastaway : MonoBehaviour
     }
     IEnumerator PrintAllCharacters()
     {
-        CharacterCreator.Instance.isPrinting = true;
+        CastawayCreator.Instance.isPrinting = true;
 
         for (int i = 0; i < character_SO.character_List.Count; i++)
         {
-            CharacterCreator.Instance.SetDisplayedCard(i);
+            CastawayCreator.Instance.SetDisplayedCard(i);
 
             yield return new WaitForSeconds(0.1f);
             ScreenCapture.CaptureScreenshot("Castaway - " + character_SO.character_List[i].name + ".png", 1);
             yield return new WaitForSeconds(0.1f);
         }
 
-        CharacterCreator.Instance.isPrinting = false;
+        CastawayCreator.Instance.isPrinting = false;
     }
 }

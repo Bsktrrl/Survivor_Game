@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 [ExecuteInEditMode]
 public class EventCreator : Singleton<EventCreator>
@@ -10,6 +11,11 @@ public class EventCreator : Singleton<EventCreator>
 
     [SerializeField] TextMeshProUGUI name;
     [SerializeField] TextMeshProUGUI description;
+
+    [SerializeField] Image gameStateImage;
+
+    [SerializeField] Sprite tribal_Sprite;
+    [SerializeField] Sprite merged_Sprite;
 
     public bool isScreenshoting;
 
@@ -36,5 +42,15 @@ public class EventCreator : Singleton<EventCreator>
 
         //Set Description
         description.text = event_SO.eventList[index].description;
+
+        //Set GameStrate Sprite
+        if (event_SO.eventList[index].isMerged)
+        {
+            gameStateImage.sprite = merged_Sprite;
+        }
+        else
+        {
+            gameStateImage.sprite = tribal_Sprite;
+        }
     }
 }

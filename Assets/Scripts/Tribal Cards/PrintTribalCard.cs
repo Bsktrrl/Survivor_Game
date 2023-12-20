@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PrintGameChanger : MonoBehaviour
+public class PrintTribalCard : MonoBehaviour
 {
 
 
@@ -28,30 +28,30 @@ public class PrintGameChanger : MonoBehaviour
 
     void PrintScreen()
     {
-        GameChangerCreator.Instance.isScreenshoting = true;
+        TribalCardCreator.Instance.isScreenshoting = true;
 
         ScreenCapture.CaptureScreenshot("Temp" + ".png", 1);
 
-        GameChangerCreator.Instance.isScreenshoting = false;
+        TribalCardCreator.Instance.isScreenshoting = false;
 
         print("Take a Screenshot");
     }
 
     IEnumerator PrintAllCharacters()
     {
-        GameChangerCreator.Instance.isScreenshoting = true;
+        TribalCardCreator.Instance.isScreenshoting = true;
 
-        for (int i = 0; i < GameChangerCreator.Instance.gameChanger_SO.gameChangerList.Count; i++)
+        for (int i = 0; i < TribalCardCreator.Instance.gameChanger_SO.gameChangerList.Count; i++)
         {
-            print(i + " - Take a Screenshot: " + GameChangerCreator.Instance.gameChanger_SO.gameChangerList[i].name);
+            print(i + " - Take a Screenshot: " + TribalCardCreator.Instance.gameChanger_SO.gameChangerList[i].name);
 
-            GameChangerCreator.Instance.BuildEventCard(i);
+            TribalCardCreator.Instance.BuildEventCard(i);
 
             yield return new WaitForSeconds(0.1f);
-            ScreenCapture.CaptureScreenshot("Game Changer - " + GameChangerCreator.Instance.gameChanger_SO.gameChangerList[i].name + ".png", 1);
+            ScreenCapture.CaptureScreenshot("Tribal Card - " + TribalCardCreator.Instance.gameChanger_SO.gameChangerList[i].name + ".png", 1);
             yield return new WaitForSeconds(0.1f);
         }
 
-        GameChangerCreator.Instance.isScreenshoting = false;
+        TribalCardCreator.Instance.isScreenshoting = false;
     }
 }

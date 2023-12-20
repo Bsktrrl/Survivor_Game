@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class Character_SO : ScriptableObject
+public class Castaway_SO : ScriptableObject
 {
-    public List<Character> character_List = new List<Character>();
+    public List<Castaway> character_List = new List<Castaway>();
 }
 
 [Serializable]
-public class Character
+public class Castaway
 {
     public string name;
     public Sprite image;
@@ -19,6 +19,9 @@ public class Character
     [Space(10)]
     public int popularity;
     public int morale;
+
+    [Space(10)]
+    public Tier tier;
 
     [Space(10)]
     [TextArea(3, 10)] public string ability;

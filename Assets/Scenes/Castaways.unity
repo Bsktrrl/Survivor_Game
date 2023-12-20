@@ -1821,7 +1821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9529412, g: 0.90588236, b: 0.78431374, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1971,7 +1971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2007,7 +2007,6 @@ GameObject:
   - component: {fileID: 689534448}
   - component: {fileID: 689534451}
   - component: {fileID: 689534450}
-  - component: {fileID: 689534449}
   m_Layer: 5
   m_Name: StatsList
   m_TagString: Untagged
@@ -2049,36 +2048,6 @@ RectTransform:
   m_AnchoredPosition: {x: 290, y: 202}
   m_SizeDelta: {x: 1182.7, y: 751.295}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &689534449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 689534447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &689534450
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5721,7 +5690,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056065077}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b71f3f22a35139c4e82dd5e819421d19, type: 3}
   m_Name: 
@@ -5731,6 +5700,11 @@ MonoBehaviour:
   character_image: {fileID: 1591961252}
   ability_text: {fileID: 1496321383}
   popularity_text: {fileID: 743569265}
+  bg_Image: {fileID: 538697329}
+  normal_Color: {r: 0.83137256, g: 0.83137256, b: 0.83137256, a: 1}
+  rare_Color: {r: 0.7882353, g: 0.9019608, b: 0.9529412, a: 1}
+  epic_Color: {r: 0.9529412, g: 0.78431374, b: 0.9529412, a: 1}
+  legendaryl_Color: {r: 0.9529412, g: 0.90588236, b: 0.78431374, a: 1}
   lowest_Color: {r: 0.8679245, g: 0.29804197, b: 0.3275914, a: 1}
   highest_Color: {r: 0.22794907, g: 0.8113208, b: 0.20971872, a: 1}
   best_Color: {r: 0.9433962, g: 0.93892515, b: 0, a: 1}

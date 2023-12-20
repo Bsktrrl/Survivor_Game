@@ -7,12 +7,12 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [ExecuteInEditMode]
-public class CharacterCreator : Singleton<CharacterCreator>
+public class CastawayCreator : Singleton<CastawayCreator>
 {
-    public static CharacterCreator instance { get; private set; }
+    public static CastawayCreator instance { get; private set; }
 
     #region Variables
-    [SerializeField] Character_SO character_SO;
+    [SerializeField] Castaway_SO character_SO;
 
     [Header("Name_text")]
     public TextMeshProUGUI name_Text;
@@ -25,6 +25,13 @@ public class CharacterCreator : Singleton<CharacterCreator>
 
     [Header("Popularity_text")]
     public TextMeshProUGUI popularity_text;
+
+    [Header("Tier BG Colors")]
+    public Image bg_Image;
+    [SerializeField] Color normal_Color;
+    [SerializeField] Color rare_Color;
+    [SerializeField] Color epic_Color;
+    [SerializeField] Color legendaryl_Color;
 
     [Header("Stat Colors")]
     [SerializeField] Color lowest_Color;
@@ -438,5 +445,29 @@ public class CharacterCreator : Singleton<CharacterCreator>
         #endregion
 
         #endregion
+
+        //Set Tier BG Color
+        switch (character_SO.character_List[index].tier)
+        {
+            case Tier.None:
+                bg_Image.color = normal_Color;
+                break;
+            case Tier.Normal:
+                bg_Image.color = normal_Color;
+                break;
+            case Tier.Rare:
+                bg_Image.color = rare_Color;
+                break;
+            case Tier.Epic:
+                bg_Image.color = epic_Color;
+                break;
+            case Tier.Legenday:
+                bg_Image.color = legendaryl_Color;
+                break;
+
+            default:
+                bg_Image.color = normal_Color;
+                break;
+        }
     }
 }

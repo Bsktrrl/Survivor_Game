@@ -19,9 +19,4 @@ MonoBehaviour:
       how many lines I have to include in the description portion of this box before
       it exceeds the limit. Right now the limit seems to be 4 lines. let's see how
       many other lines I can write before the limit it reached. 5 lines.
-  - name: 'Another test of patient for the weak '
-    description: Here is a text where I write some stuff only to fill the screen
-      to see how maky word I can write <sprite=2> before the box is filled up. I
-      want to see how many lines I have to include in the description portion of
-      this box before it exceeds the limit. Right now the limit seems to be 4 lines.
-      let's see how many other lines I can write before the limit it reached. 5 lines.
+    isMerged: 0
