@@ -48,7 +48,14 @@ public class PrintChallenges : MonoBehaviour
             ChallengeCreator.Instance.BuildChallengeCard(i);
 
             yield return new WaitForSeconds(0.1f);
-            ScreenCapture.CaptureScreenshot(ChallengeCreator.Instance.challenges_SO.requirementSlotList[i].name + ".png", 1);
+            if (ChallengeCreator.Instance.challenges_SO.requirementSlotList[i].isMerged)
+            {
+                ScreenCapture.CaptureScreenshot("Challenge_Merged - " + ChallengeCreator.Instance.challenges_SO.requirementSlotList[i].name + ".png", 1);
+            }
+            else
+            {
+                ScreenCapture.CaptureScreenshot("Challenge_Tribal - " + ChallengeCreator.Instance.challenges_SO.requirementSlotList[i].name + ".png", 1);
+            }
             yield return new WaitForSeconds(0.1f);
         }
 

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DailyTaskCreator : Singleton<DailyTaskCreator>
 {
     [Header("_SO")]
-    [SerializeField] DailyTask_SO dailyTask_SO;
+    public DailyTask_SO dailyTask_SO;
 
     [Header("Prefab")]
     [SerializeField] GameObject requirementSlot_Parent;
@@ -66,20 +66,25 @@ public class DailyTaskCreator : Singleton<DailyTaskCreator>
     [TextArea(3, 10)] public string generalRewardHeader;
     [TextArea(3, 10)] public string punishmentHeader;
 
+    public bool isScreenshoting;
+
 
     //--------------------
 
 
     private void Update()
     {
-        BuildDailyTaskCard(dailyTask_SO.dailyTaskList.Count - 1);
+        if (!isScreenshoting)
+        {
+            BuildDailyTaskCard(dailyTask_SO.dailyTaskList.Count - 1);
+        }
     }
 
 
     //--------------------
 
 
-    void BuildDailyTaskCard(int index)
+    public void BuildDailyTaskCard(int index)
     {
         //Set Name
         name.text = dailyTask_SO.dailyTaskList[index].name;

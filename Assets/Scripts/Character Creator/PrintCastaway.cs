@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PrintManager : MonoBehaviour
+public class PrintCastaway : MonoBehaviour
 {
     [SerializeField] Character_SO character_SO;
 
@@ -36,10 +36,8 @@ public class PrintManager : MonoBehaviour
             CharacterCreator.Instance.SetDisplayedCard(i);
 
             yield return new WaitForSeconds(0.1f);
-            ScreenCapture.CaptureScreenshot(character_SO.character_List[i].name + ".png", 1);
+            ScreenCapture.CaptureScreenshot("Castaway - " + character_SO.character_List[i].name + ".png", 1);
             yield return new WaitForSeconds(0.1f);
-
-            //print("Take a Screenshot: " + character_SO.character_List[i].name + ".png");
         }
 
         CharacterCreator.Instance.isPrinting = false;
