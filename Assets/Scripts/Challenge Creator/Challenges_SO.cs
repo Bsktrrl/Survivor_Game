@@ -18,8 +18,6 @@ public class Challenge
 
     public bool isMerged;
 
-    public float spacing = 100;
-
     public List<RequirementSlotInfo> requirementSlots = new List<RequirementSlotInfo>();
 }
 

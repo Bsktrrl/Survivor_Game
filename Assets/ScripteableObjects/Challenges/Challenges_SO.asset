@@ -17,7 +17,6 @@ MonoBehaviour:
     subName: Try to win this challenge as fast as possible
     ChallengeType_Image: {fileID: 21300000, guid: 80c2aced959896b4580e44ea6900ac0a, type: 3}
     isMerged: 0
-    spacing: 0
     requirementSlots:
     - description: You then need to only have one sentence to tell what will happen
         to the next stage of the challenge. For if I write more than one line of
@@ -26,7 +25,7 @@ MonoBehaviour:
       diceType: 3
       stats: 0800000007000000
       requirement: 14
-      requirementChange: 0
+      requirementChange: 2
       repeat: 0
       spacing: -500
     - description: You then need to only have one sentence to tell what will happen
@@ -34,18 +33,8 @@ MonoBehaviour:
         text, the text will get smaller. I can try to make tree lines of text, too
         see if that helps
       diceType: 3
-      stats: 0800000007000000
-      requirement: 14
+      stats: 07000000090000000a000000
+      requirement: 5
       requirementChange: 0
       repeat: 0
-      spacing: -500
-    - description: You then need to only have one sentence to tell what will happen
-        to the next stage of the challenge. For if I write more than one line of
-        text, the text will get smaller. I can try to make tree lines of text, too
-        see if that helps
-      diceType: 3
-      stats: 0800000007000000
-      requirement: 14
-      requirementChange: 0
-      repeat: 0
-      spacing: -500
+      spacing: -300

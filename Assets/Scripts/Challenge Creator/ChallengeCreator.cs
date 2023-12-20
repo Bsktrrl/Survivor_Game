@@ -153,7 +153,6 @@ public class ChallengeCreator : Singleton<ChallengeCreator>
 
             //Instantiate a requirementSlot
             requirementSlotList.Add(Instantiate(requirementSlot_Prefab, tempParent.transform));
-            tempParent.GetComponent<VerticalLayoutGroup>().spacing = challenges_SO.requirementSlotList[index].spacing;
             RequirementSlot slot_2 = requirementSlotList[requirementSlotList.Count - 1].GetComponent<RequirementSlot>();
 
             //Add Box_Sprite to RequirementSlots
