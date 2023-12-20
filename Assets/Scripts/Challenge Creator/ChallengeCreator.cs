@@ -17,7 +17,9 @@ public class ChallengeCreator : Singleton<ChallengeCreator>
     [SerializeField] Image challengeImage;
     [SerializeField] Image challengeType;
 
-    [SerializeField] GameObject requirementSlot_Parent;
+    [SerializeField] GameObject requirementSlot_Parent_1;
+    [SerializeField] GameObject requirementSlot_Parent_2;
+    [SerializeField] GameObject requirementSlot_Parent_3;
     [SerializeField] GameObject requirementSlot_Prefab;
 
     [Header("Components")]
@@ -67,6 +69,10 @@ public class ChallengeCreator : Singleton<ChallengeCreator>
     [SerializeField] Sprite stat_AdvantageHunting;
     [SerializeField] Sprite stat_Survival;
 
+    [Header("Box Sprites")]
+    [SerializeField] Sprite requirementBox_Upper;
+    [SerializeField] Sprite requirementBox_Lower;
+
     [Header("Lists")]
     public List<GameObject> requirementSlotList = new List<GameObject>();
     #endregion
@@ -115,9 +121,27 @@ public class ChallengeCreator : Singleton<ChallengeCreator>
         //Set new RequirementSlots
         for (int i = 0; i < challenges_SO.requirementSlotList[index].requirementSlots.Count; i++)
         {
+            //Set RequirementSlot Parent
+            GameObject tempParent = null;
+            if (i <= 0)
+            { 
+                tempParent = requirementSlot_Parent_1;
+            }
+            else if (i == 1)
+            {
+                tempParent = requirementSlot_Parent_2;
+            }
+            else if (i >= 2)
+            {
+                tempParent = requirementSlot_Parent_3;
+            }
+
             //Instantiate Description
-            requirementSlotList.Add(Instantiate(requirementSlot_Prefab, requirementSlot_Parent.transform));
+            requirementSlotList.Add(Instantiate(requirementSlot_Prefab, tempParent.transform));
             RequirementSlot slot_1 = requirementSlotList[requirementSlotList.Count - 1].GetComponent<RequirementSlot>();
+
+            //Add Box_Sprite to RequirementSlots
+            slot_1.GetComponent<Image>().sprite = requirementBox_Upper;
 
             //Add text to Description
             slot_1.componentsList.Add(Instantiate(description, slot_1.components_Parent.transform));
@@ -128,9 +152,12 @@ public class ChallengeCreator : Singleton<ChallengeCreator>
 
 
             //Instantiate a requirementSlot
-            requirementSlotList.Add(Instantiate(requirementSlot_Prefab, requirementSlot_Parent.transform));
-            requirementSlot_Parent.GetComponent<VerticalLayoutGroup>().spacing = challenges_SO.requirementSlotList[index].spacing;
+            requirementSlotList.Add(Instantiate(requirementSlot_Prefab, tempParent.transform));
+            tempParent.GetComponent<VerticalLayoutGroup>().spacing = challenges_SO.requirementSlotList[index].spacing;
             RequirementSlot slot_2 = requirementSlotList[requirementSlotList.Count - 1].GetComponent<RequirementSlot>();
+
+            //Add Box_Sprite to RequirementSlots
+            slot_2.GetComponent<Image>().sprite = requirementBox_Lower;
 
             //Add Dice
             slot_2.componentsList.Add(Instantiate(dice_Image, slot_2.components_Parent.transform));
