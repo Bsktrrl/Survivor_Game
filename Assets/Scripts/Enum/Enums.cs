@@ -97,3 +97,13 @@ public enum Season
     Season_39_IslandOfTheIdols,
     Season_40_WinnersAtWar
 }
+
+public enum GamePhases
+{
+    None,
+
+    SetupPhase,
+    DailyTaskPhase,
+    ChallengePhase,
+    TribalCouncilPhase
+}
