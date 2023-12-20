@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d6afe1f50e013147ac9aa6c00f129e4, type: 3}
+  m_Name: Daily Task_SO
+  m_EditorClassIdentifier: 
+  dailyTaskList:
+  - name: Go Fishing
+    description: 'Here I write to inform myself of what text ould look like if there
+      is something to write The fluff is amazing to watch in the text form as the
+      letters numbers are increasing in sice. '
+    contributorReward: 1<sprite=15>
+    generalReward: 1<sprite=17>
+    punishment: 1<sprite=16>
+    requirementSlot:
+      diceType: 2
+      stats: 0e0000000f000000
+      requirement: 4
+      requirementChange: 0
+      repeat: 0
+      spacing: -600

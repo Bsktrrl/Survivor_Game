@@ -9,37 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: f5156509b5b6a7b4f87c9f36b85e0108, type: 3}
   m_Name: Challenges_SO
   m_EditorClassIdentifier: Assembly-CSharp::Challenges_SO
   requirementSlotList:
-  - name: A Crate Idea
-    subName: Try to complete the challenge
-    ChallengeType_Image: {fileID: 21300000, guid: 47bdbaeaf2fa8b243b457a6a3c7f8bed, type: 3}
-    isMerged: 1
-    spacing: 100
-    requirementSlots:
-    - diceType: 11
-      stats: 0600000007000000
-      requirement: 8
-      requirementChange: 2
-      repeat: 4
-      spacing: -600
-    - diceType: 4
-      stats: 06000000070000000800000009000000
-      requirement: 5
-      requirementChange: 0
-      repeat: 0
-      spacing: -200
-    - diceType: 4
-      stats: 06000000070000000800000009000000
-      requirement: 5
-      requirementChange: 0
-      repeat: 0
-      spacing: -200
-    - diceType: 4
-      stats: 06000000070000000800000009000000
-      requirement: 5
-      requirementChange: 0
-      repeat: 0
-      spacing: -200
+  - name: Hello
+    subName: 
+    ChallengeType_Image: {fileID: 0}
+    isMerged: 0
+    spacing: 0
+    requirementSlots: []

@@ -6,10 +6,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [ExecuteInEditMode]
-public class ChallengeCreator : MonoBehaviour
+public class ChallengeCreator : Singleton<ChallengeCreator>
 {
     #region Variables
-    [SerializeField] Challenges_SO challenges_SO;
+    public Challenges_SO challenges_SO;
 
     [Header("UI")]
     [SerializeField] TextMeshProUGUI name;
@@ -66,13 +66,11 @@ public class ChallengeCreator : MonoBehaviour
     [SerializeField] Sprite stat_AdvantageHunting;
     [SerializeField] Sprite stat_Survival;
 
-    [Header("Arrow Sprites")]
-    [SerializeField] Sprite requirement_Increasing;
-    [SerializeField] Sprite requirement_Decreasing;
-
     [Header("Lists")]
     public List<GameObject> requirementSlotList = new List<GameObject>();
     #endregion
+
+    public bool isScreenshoting;
 
 
     //--------------------
@@ -80,7 +78,7 @@ public class ChallengeCreator : MonoBehaviour
 
     private void Update()
     {
-        if (challenges_SO.requirementSlotList.Count > 0)
+        if (challenges_SO.requirementSlotList.Count > 0 && !isScreenshoting)
         {
             //Get the latest challenge card built
             BuildChallengeCard(challenges_SO.requirementSlotList.Count - 1);
@@ -91,7 +89,7 @@ public class ChallengeCreator : MonoBehaviour
     //--------------------
 
 
-    void BuildChallengeCard(int index)
+    public void BuildChallengeCard(int index)
     {
         //Set Name
         name.text = challenges_SO.requirementSlotList[index].name;
@@ -278,44 +276,4 @@ public class ChallengeCreator : MonoBehaviour
                 return null;
         }
     }
-}
-
-[CreateAssetMenu]
-public class Challenges_SO : ScriptableObject
-{
-    public List<Challenge> requirementSlotList = new List<Challenge>();
-}
-
-[Serializable]
-public class Challenge
-{
-    public string name;
-    public string subName;
-    public Sprite ChallengeType_Image;
-
-    public bool isMerged;
-
-    public float spacing = 100;
-
-    public List<RequirementSlotInfo> requirementSlots = new List<RequirementSlotInfo>();
-}
-
-[Serializable]
-public class RequirementSlotInfo
-{
-    public dice diceType;
-    public List<Stats> stats;
-    public int requirement;
-    public requirementChange requirementChange;
-    public int repeat;
-
-    public float spacing;
-}
-
-public enum requirementChange
-{
-    None,
-
-    Increasing,
-    Decreasing
 }

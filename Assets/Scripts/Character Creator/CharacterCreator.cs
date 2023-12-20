@@ -1,63 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Common;
+using System.Threading;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-//[ExecuteInEditMode]
-public class CharacterCreator : MonoBehaviour
+[ExecuteInEditMode]
+public class CharacterCreator : Singleton<CharacterCreator>
 {
     public static CharacterCreator instance { get; private set; }
 
     #region Variables
     [SerializeField] Character_SO character_SO;
 
-    [Header("Stats")]
-    public string name;
-    public Sprite image;
-    public Season season;
-    public int popularity;
-    [TextArea(3, 10)] public string ability;
-
-    [Space(10)]
-    public int morale;
-
-    [Space(10)]
-    public int stat_Relationship;
-    public int stat_Charisma;
-    public int stat_Intuision;
-    public int stat_Persuation;
-    public int stat_Deception;
-    
-    [Space(10)]
-    public int stat_Dexterity;
-    public int stat_Strength;
-    public int stat_Puzzle;
-    public int stat_Consentration;
-    public int stat_Endurance;
-
-    [Space(10)]
-    public int stat_Loyality;
-    public int stat_Strategic;
-    public int stat_SelfControl;
-    public int stat_Advantages;
-    public int stat_Survival;
-
-    [Space(100)]
     [Header("Name_text")]
-    [SerializeField] TextMeshProUGUI name_Text;
+    public TextMeshProUGUI name_Text;
 
     [Header("Image_sprite")]
-    [SerializeField] Image character_image;
+    public Image character_image;
 
     [Header("Ability_text")]
-    [SerializeField] TextMeshProUGUI ability_text;
+    public TextMeshProUGUI ability_text;
 
     [Header("Popularity_text")]
-    [SerializeField] TextMeshProUGUI popularity_text;
+    public TextMeshProUGUI popularity_text;
+
+    [Header("Stat Colors")]
+    [SerializeField] Color lowest_Color;
+    [SerializeField] Color highest_Color;
+    [SerializeField] Color best_Color;
 
     [Header("Morale_Track")]
-    [SerializeField] Image morale_Track;
+    public Image morale_Track;
     [SerializeField] Sprite morale_1;
     [SerializeField] Sprite morale_2;
     [SerializeField] Sprite morale_3;
@@ -89,7 +64,7 @@ public class CharacterCreator : MonoBehaviour
     [SerializeField] TextMeshProUGUI stat_Survival_Text;
 
     [Header("Season_Logo")]
-    [SerializeField] Image season_Logo;
+    public Image season_Logo;
 
     [SerializeField] Sprite Season_1_Boreno;
     [SerializeField] Sprite Season_2_AustralianOutback;
@@ -136,36 +111,38 @@ public class CharacterCreator : MonoBehaviour
     [SerializeField] Sprite Season_40_WinnersAtWar;
     #endregion
 
+    public bool isPrinting;
+
 
     //--------------------
 
 
-    private void Awake()
+    private void Update()
     {
-        //Singleton
-        if (instance != null && instance != this)
+        if (!isPrinting)
         {
-            Destroy(gameObject);
-        }
-        else
-        {
-            instance = this;
+            SetDisplayedCard(character_SO.character_List.Count - 1);
         }
     }
-    private void Update()
+
+
+    //--------------------
+
+
+    public void SetDisplayedCard(int index)
     {
         //Set Character Name
         #region
-        name_Text.text = name;
+        name_Text.text = character_SO.character_List[index].name;
         #endregion
 
         //Set Image
         #region
-        character_image.sprite = image;
+        character_image.sprite = character_SO.character_List[index].image;
         #endregion
 
         //Set Season Logo
-        switch (season)
+        switch (character_SO.character_List[index].season)
         {
             case Season.Season_1_Boreno:
                 season_Logo.sprite = Season_1_Boreno;
@@ -294,16 +271,16 @@ public class CharacterCreator : MonoBehaviour
 
         //Set Popularity
         #region
-        popularity_text.text = popularity.ToString();
+        popularity_text.text = character_SO.character_List[index].popularity.ToString();
         #endregion
 
         //Set Ability
         #region
-        ability_text.text = "<size=130%><b><U>Ability</b></U>\r\n<size=20%>\r\n<size=100%>" + ability;
+        ability_text.text = "<size=130%><b><U>Ability</b></U>\r\n<size=20%>\r\n<size=100%>" + character_SO.character_List[index].ability;
         #endregion
 
         //Set Morale_Track
-        switch (morale)
+        switch (character_SO.character_List[index].morale)
         {
             case 1:
                 morale_Track.sprite = morale_1;
@@ -342,108 +319,124 @@ public class CharacterCreator : MonoBehaviour
 
         //Set Stat Number
         #region
-        stat_Relationship_Text.text = stat_Relationship.ToString();
-        stat_Charisma_Text.text = stat_Charisma.ToString();
-        stat_Intuision_Text.text = stat_Intuision.ToString();
-        stat_Persuation_Text.text = stat_Persuation.ToString();
-        stat_Deception_Text.text = stat_Deception.ToString();
+        #region
+        stat_Relationship_Text.text = character_SO.character_List[index].Relationship.ToString();
+        stat_Charisma_Text.text = character_SO.character_List[index].Charisma.ToString();
+        stat_Intuision_Text.text = character_SO.character_List[index].Intuision.ToString();
+        stat_Persuation_Text.text = character_SO.character_List[index].Persuation.ToString();
+        stat_Deception_Text.text = character_SO.character_List[index].Deception.ToString();
 
-        stat_Dexterity_Text.text = stat_Dexterity.ToString();
-        stat_Strength_Text.text = stat_Strength.ToString();
-        stat_Puzzle_Text.text = stat_Puzzle.ToString();
-        stat_Consentration_Text.text = stat_Consentration.ToString();
-        stat_Endurance_Text.text = stat_Endurance.ToString();
+        stat_Dexterity_Text.text = character_SO.character_List[index].Dexterity.ToString();
+        stat_Strength_Text.text = character_SO.character_List[index].Strength.ToString();
+        stat_Puzzle_Text.text = character_SO.character_List[index].Puzzle.ToString();
+        stat_Consentration_Text.text = character_SO.character_List[index].Consentration.ToString();
+        stat_Endurance_Text.text = character_SO.character_List[index].Endurance.ToString();
 
-        stat_Loyality_Text.text = stat_Loyality.ToString();
-        stat_Strategic_Text.text = stat_Strategic.ToString();
-        stat_SelfControl_Text.text = stat_SelfControl.ToString();
-        stat_Advantages_Text.text = stat_Advantages.ToString();
-        stat_Survival_Text.text = stat_Survival.ToString();
+        stat_Loyality_Text.text = character_SO.character_List[index].Loyality.ToString();
+        stat_Strategic_Text.text = character_SO.character_List[index].Strategic.ToString();
+        stat_SelfControl_Text.text = character_SO.character_List[index].SelfControl.ToString();
+        stat_Advantages_Text.text = character_SO.character_List[index].Advantages.ToString();
+        stat_Survival_Text.text = character_SO.character_List[index].Survival.ToString();
+        #endregion
+
+        //Set stat color
+        List<int> tempStatList = new List<int>();
+        #region
+        tempStatList.Add(character_SO.character_List[index].Relationship);
+        tempStatList.Add(character_SO.character_List[index].Charisma);
+        tempStatList.Add(character_SO.character_List[index].Intuision);
+        tempStatList.Add(character_SO.character_List[index].Persuation);
+        tempStatList.Add(character_SO.character_List[index].Deception);
+
+        tempStatList.Add(character_SO.character_List[index].Dexterity);
+        tempStatList.Add(character_SO.character_List[index].Strength);
+        tempStatList.Add(character_SO.character_List[index].Puzzle);
+        tempStatList.Add(character_SO.character_List[index].Consentration);
+        tempStatList.Add(character_SO.character_List[index].Endurance);
+
+        tempStatList.Add(character_SO.character_List[index].Loyality);
+        tempStatList.Add(character_SO.character_List[index].Strategic);
+        tempStatList.Add(character_SO.character_List[index].SelfControl);
+        tempStatList.Add(character_SO.character_List[index].Advantages);
+        tempStatList.Add(character_SO.character_List[index].Survival);
+        #endregion
+        List<TextMeshProUGUI> tempStatTextList = new List<TextMeshProUGUI>();
+        #region
+        tempStatTextList.Add(stat_Relationship_Text);
+        tempStatTextList.Add(stat_Charisma_Text);
+        tempStatTextList.Add(stat_Intuision_Text);
+        tempStatTextList.Add(stat_Persuation_Text);
+        tempStatTextList.Add(stat_Deception_Text);
+
+        tempStatTextList.Add(stat_Dexterity_Text);
+        tempStatTextList.Add(stat_Strength_Text);
+        tempStatTextList.Add(stat_Puzzle_Text);
+        tempStatTextList.Add(stat_Consentration_Text);
+        tempStatTextList.Add(stat_Endurance_Text);
+
+        tempStatTextList.Add(stat_Loyality_Text);
+        tempStatTextList.Add(stat_Strategic_Text);
+        tempStatTextList.Add(stat_SelfControl_Text);
+        tempStatTextList.Add(stat_Advantages_Text);
+        tempStatTextList.Add(stat_Survival_Text);
+
+        for (int i = 0; i < tempStatTextList.Count; i++)
+        {
+            tempStatTextList[i].color = new Color(0, 0, 0, 1);
+        }
+        #endregion
+
+        //set color lowest
+        #region
+        int count_low = int.MaxValue;
+        for (int i = 0; i < tempStatList.Count; i++)
+        {
+            if (tempStatList[i] < count_low)
+            {
+                count_low = tempStatList[i];
+            }
+        }
+
+        for (int i = 0; i < tempStatList.Count; i++)
+        {
+            if (tempStatList[i] == count_low)
+            {
+                tempStatTextList[i].color = lowest_Color;
+            }
+        }
+        #endregion
+
+        //set color higher
+        #region
+        int count_high = int.MinValue;
+        for (int i = 0; i < tempStatList.Count; i++)
+        {
+            if (tempStatList[i] > count_high && tempStatList[i] < 6)
+            {
+                count_high = tempStatList[i];
+            }
+        }
+
+        for (int i = 0; i < tempStatList.Count; i++)
+        {
+            if (tempStatList[i] == count_high)
+            {
+                tempStatTextList[i].color = highest_Color;
+            }
+        }
+        #endregion
+
+        //set color best
+        #region
+        for (int i = 0; i < tempStatList.Count; i++)
+        {
+            if (tempStatList[i] >= 6)
+            {
+                tempStatTextList[i].color = best_Color;
+            }
+        }
+        #endregion
+
         #endregion
     }
-
-
-    //--------------------
-
-
-    public void AddButton_isPressed()
-    {
-        Character character = new Character();
-
-        character.name = name;
-        character.image = image;
-        character.season = season;
-
-        character.popularity = popularity;
-        character.morale = morale;
-
-        character.ability = ability;
-
-        character.Relationship = stat_Relationship;
-        character.Charisma = stat_Charisma;
-        character.Intuision = stat_Intuision;
-        character.Persuation = stat_Persuation;
-        character.Deception = stat_Deception;
-
-        character.Dexterity = stat_Dexterity;
-        character.Strength = stat_Strength;
-        character.Puzzle = stat_Puzzle;
-        character.Consentration = stat_Consentration;
-        character.Endurance = stat_Endurance;
-
-        character.Loyality = stat_Loyality;
-        character.Strategic = stat_Strategic;
-        character.SelfControl = stat_SelfControl;
-        character.Advantages = stat_Advantages;
-        character.Survival = stat_Survival;
-
-        character_SO.character_List.Add(character);
-    }
-}
-
-public enum Season
-{
-    Season_1_Boreno,
-    Season_2_AustralianOutback,
-    Season_3_Africa,
-    Season_4_Marquesas,
-    Season_5_Thailand,
-    Season_6_Amazonas,
-    Season_7_PearIsland,
-    Season_8_AllStars,
-    Season_9_Vanuatu,
-    Season_10_Palau,
-
-    Season_11_Guatemala,
-    Season_12_Panama,
-    Season_13_CookIsland,
-    Season_14_Fiji,
-    Season_15_China,
-    Season_16_FansVsFavorites,
-    Season_17_Gabon,
-    Season_18_Tocantins,
-    Season_19_Samoa,
-    Season_20_HeroVsVillians,
-
-    Season_21_Nicaragua,
-    Season_22_RedemtionIsland,
-    Season_23_SouthPacific,
-    Season_24_OneWorld,
-    Season_25_Philippines,
-    Season_26_Caramoan,
-    Season_27_BloodVsWater,
-    Season_28_Cagayan,
-    Season_29_BloodVsWater2,
-    Season_30_WorldApart,
-
-    Season_31_SecondChance,
-    Season_32_KaohRong,
-    Season_33_MillenialsVsGenX,
-    Season_34_GameChangers,
-    Season_35_HeroesVsHealersVsHustlers,
-    Season_36_GhostIsland,
-    Season_37_DavidVsGoliath,
-    Season_38_EdgeOfExtinction,
-    Season_39_IslandOfTheIdols,
-    Season_40_WinnersAtWar
 }

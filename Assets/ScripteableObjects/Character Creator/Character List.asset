@@ -13,24 +13,25 @@ MonoBehaviour:
   m_Name: Character List
   m_EditorClassIdentifier: 
   character_List:
-  - name: 
-    image: {fileID: 0}
-    season: 0
-    popularity: 0
-    morale: 0
-    ability: 
-    Relationship: 0
-    Charisma: 0
-    Intuision: 0
-    Persuation: 0
-    Deception: 0
-    Dexterity: 0
-    Strength: 0
-    Puzzle: 0
-    Consentration: 0
-    Endurance: 0
-    Loyality: 0
-    Strategic: 0
-    SelfControl: 0
-    Advantages: 0
-    Survival: 0
+  - name: Tyson Apostol
+    image: {fileID: 21300000, guid: 74654249baceddd44afa41eea7d0efee, type: 3}
+    season: 17
+    popularity: 548
+    morale: 10
+    ability: Hello, here's an ability for you all to enjoy to the fullest. Just let
+      me know if there are anything I can make here.
+    Relationship: 1
+    Charisma: 1
+    Intuision: 2
+    Persuation: 2
+    Deception: 3
+    Dexterity: 3
+    Strength: 4
+    Puzzle: 6
+    Consentration: 5
+    Endurance: 5
+    Loyality: 1
+    Strategic: 2
+    SelfControl: 3
+    Advantages: 4
+    Survival: 5
