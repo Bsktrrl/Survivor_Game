@@ -24,7 +24,7 @@ public class Castaway
     public Tier tier;
 
     [Space(10)]
-    [TextArea(3, 10)] public string ability;
+    [TextArea(2, 10)] public string ability;
 
     [Header("Stats")]
     public int Relationship;

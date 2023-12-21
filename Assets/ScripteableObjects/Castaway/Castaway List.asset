@@ -18,9 +18,9 @@ MonoBehaviour:
     season: 17
     popularity: 548
     morale: 10
-    tier: 4
-    ability: Hello, here's an ability for you all to enjoy to the fullest. Just let
-      me know if there are anything I can make here.
+    tier: 0
+    ability: This is the ability to this Castaway that can be used by the Player
+      as long as the Castaway is in the game
     Relationship: 1
     Charisma: 1
     Intuision: 2
