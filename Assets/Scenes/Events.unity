@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Another test of patient for the weak '
+  m_text: Test
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
   m_sharedMaterial: {fileID: 8559762881318531647, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
+  m_fontSize: 150
   m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -807,7 +807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6509434, g: 0.54034525, b: 0.41390175, a: 1}
+  m_Color: {r: 0.6792453, g: 0.5937202, b: 0.49597722, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1010,10 +1010,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: Here is a text where I write some stuff only to fill the screen to see
-    how maky word I can write <sprite=2> before the box is filled up. I want to see
-    how many lines I have to include in the description portion of this box before
-    it exceeds the limit. Right now the limit seems to be 4 lines. let's see how
-    many other lines I can write before the limit it reached. 5 lines.
+    how maky word I can write before the box is filled up. I want to see how many
+    lines I have to include in the description portion of this box before it exceeds
+    the limit. Right now the limit seems to be 4 lines. let's see how many other
+    lines I can write before the limit it reached. 5 lines.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8d87b1379914886489b0047f64834cf3, type: 2}
   m_sharedMaterial: {fileID: 8721591883100076090, guid: 8d87b1379914886489b0047f64834cf3, type: 2}

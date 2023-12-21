@@ -17,11 +17,13 @@ MonoBehaviour:
     description: 'Here I write to inform myself of what text ould look like if there
       is something to write The fluff is amazing to watch in the text form as the
       letters numbers are increasing in sice. '
-    contributorReward: 1<sprite=15>
-    generalReward: 1<sprite=17>
-    punishment: 1<sprite=16>
+    contributorReward: 1
+    contributorReward_amount: 0
+    generalReward: 1
+    generalReward_amount: 0
+    punishment: 1
+    punishment_amount: 0
     requirementSlot:
-      description: 
       diceType: 2
       stats: 0e0000000f000000
       requirement: 4
@@ -32,14 +34,16 @@ MonoBehaviour:
     description: 'Here I write to inform myself of what text ould look like if there
       is something to write The fluff is amazing to watch in the text form as the
       letters numbers are increasing in sice. '
-    contributorReward: 10<sprite=15>
-    generalReward: 10<sprite=17>
-    punishment: 10<sprite=16>
+    contributorReward: 5
+    contributorReward_amount: 3
+    generalReward: 4
+    generalReward_amount: 2
+    punishment: 1
+    punishment_amount: 1
     requirementSlot:
-      description: 
       diceType: 2
-      stats: 0e0000000f0000000b000000
+      stats: 0e000000080000000b000000
       requirement: 4
       requirementChange: 0
       repeat: 0
-      spacing: -400
+      spacing: -350

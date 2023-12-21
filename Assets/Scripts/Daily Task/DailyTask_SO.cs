@@ -12,11 +12,20 @@ public class DailyTask_SO : ScriptableObject
 [Serializable]
 public class DailyTask
 {
+    [Header("General")]
     public string name;
     [TextArea(3, 10)] public string description;
-    [TextArea(3, 10)] public string contributorReward;
-    [TextArea(3, 10)] public string generalReward;
-    [TextArea(3, 10)] public string punishment;
 
-    public RequirementSlotInfo requirementSlot;
+    [Header("Rewards")]
+    public Rewards contributorReward;
+    public int contributorReward_amount;
+
+    public Rewards generalReward;
+    public int generalReward_amount;
+
+    public Rewards punishment;
+    public int punishment_amount;
+
+    [Header("RequirementSlot")]
+    public RequirementSlotInfoWithoutDescription requirementSlot;
 }

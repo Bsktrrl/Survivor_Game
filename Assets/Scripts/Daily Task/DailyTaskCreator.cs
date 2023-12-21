@@ -15,7 +15,6 @@ public class DailyTaskCreator : Singleton<DailyTaskCreator>
     [Header("General")]
     [SerializeField] TextMeshProUGUI name;
     [SerializeField] TextMeshProUGUI description;
-    [SerializeField] TextMeshProUGUI reward;
 
     [SerializeField] GameObject requirementSlot;
 
@@ -61,12 +60,71 @@ public class DailyTaskCreator : Singleton<DailyTaskCreator>
     [SerializeField] Sprite stat_AdvantageHunting;
     [SerializeField] Sprite stat_Survival;
 
-    [Header("Reward Header Text")]
-    [TextArea(3, 10)] public string contributorRewardHeader;
-    [TextArea(3, 10)] public string generalRewardHeader;
-    [TextArea(3, 10)] public string punishmentHeader;
+    [Header("Rewards")]
+    [SerializeField] GameObject contributor_rewardBox;
+    [SerializeField] Image contributor_rewardImage;
+    [SerializeField] TextMeshProUGUI contributor_rewardText;
+
+    [SerializeField] GameObject general_rewardBox;
+    [SerializeField] Image general_rewardImage;
+    [SerializeField] TextMeshProUGUI general_rewardText;
+
+    [SerializeField] GameObject punishment_rewardBox;
+    [SerializeField] Image punishment_rewardImage;
+    [SerializeField] TextMeshProUGUI punishment_rewardText;
 
     public bool isScreenshoting;
+
+    #region Reward Images
+    [Header("Reward Images")]
+    [SerializeField] Sprite Outwit_Coin;
+    [SerializeField] Sprite Outplay_Coin;
+    [SerializeField] Sprite Outlast_Coin;
+
+    [SerializeField] Sprite PressureToken;
+
+    [SerializeField] Sprite Quest;
+    [SerializeField] Sprite TribalCard;
+
+    [SerializeField] Sprite MoraleUP;
+    [SerializeField] Sprite MoraleDown;
+
+    [SerializeField] Sprite Stat_Relationship_UP;
+    [SerializeField] Sprite Stat_Charisma_UP;
+    [SerializeField] Sprite Stat_Intuition_UP;
+    [SerializeField] Sprite Stat_Perception_UP;
+    [SerializeField] Sprite Stat_Deception_UP;
+
+    [SerializeField] Sprite Stat_Dexterity_UP;
+    [SerializeField] Sprite Stat_Strength_UP;
+    [SerializeField] Sprite Stat_Puzzle_UP;
+    [SerializeField] Sprite Stat_Consentration_UP;
+    [SerializeField] Sprite Stat_Endurance_UP;
+
+    [SerializeField] Sprite Stat_Loyalty_UP;
+    [SerializeField] Sprite Stat_Strategic_UP;
+    [SerializeField] Sprite Stat_SelfControl_UP;
+    [SerializeField] Sprite Stat_AdvantageHunting_UP;
+    [SerializeField] Sprite Stat_Survival_UP;
+
+    [SerializeField] Sprite Stat_Relationship_DOWN;
+    [SerializeField] Sprite Stat_Charisma_DOWN;
+    [SerializeField] Sprite Stat_Intuition_DOWN;
+    [SerializeField] Sprite Stat_Perception_DOWN;
+    [SerializeField] Sprite Stat_Deception_DOWN;
+
+    [SerializeField] Sprite Stat_Dexterity_DOWN;
+    [SerializeField] Sprite Stat_Strength_DOWN;
+    [SerializeField] Sprite Stat_Puzzle_DOWN;
+    [SerializeField] Sprite Stat_Consentration_DOWN;
+    [SerializeField] Sprite Stat_Endurance_DOWN;
+
+    [SerializeField] Sprite Stat_Loyalty_DOWN;
+    [SerializeField] Sprite Stat_Strategic_DOWN;
+    [SerializeField] Sprite Stat_SelfControl_DOWN;
+    [SerializeField] Sprite Stat_AdvantageHunting_DOWN;
+    [SerializeField] Sprite Stat_Survival_DOWN;
+    #endregion
 
 
     //--------------------
@@ -160,13 +218,413 @@ public class DailyTaskCreator : Singleton<DailyTaskCreator>
         slot.gameObject.GetComponent<HorizontalLayoutGroup>().spacing = dailyTask_SO.dailyTaskList[index].requirementSlot.spacing;
         #endregion
 
-        //Set Reward Text
-        reward.text = contributorRewardHeader;
-        reward.text += dailyTask_SO.dailyTaskList[index].contributorReward + "\n";
-        reward.text += generalRewardHeader;
-        reward.text += dailyTask_SO.dailyTaskList[index].generalReward + "\n";
-        reward.text += punishmentHeader;
-        reward.text += dailyTask_SO.dailyTaskList[index].punishment + "\n";
+        //Set Contributor Reward
+        if (dailyTask_SO.dailyTaskList[index].contributorReward != Rewards.None)
+        {
+            contributor_rewardBox.SetActive(true);
+            contributor_rewardText.text = dailyTask_SO.dailyTaskList[index].contributorReward_amount.ToString();
+
+            switch (dailyTask_SO.dailyTaskList[index].contributorReward)
+            {
+                case Rewards.None:
+                    contributor_rewardImage.sprite = null;
+                    break;
+
+                case Rewards.Outwit_Coin:
+                    contributor_rewardImage.sprite = Outwit_Coin;
+                    break;
+                case Rewards.Outplay_Coin:
+                    contributor_rewardImage.sprite = Outwit_Coin;
+                    break;
+                case Rewards.Outlast_Coin:
+                    contributor_rewardImage.sprite = Outlast_Coin;
+                    break;
+                case Rewards.PressureToken:
+                    contributor_rewardImage.sprite = PressureToken;
+                    break;
+                case Rewards.Quest:
+                    contributor_rewardImage.sprite = Quest;
+                    break;
+                case Rewards.TribalCard:
+                    contributor_rewardImage.sprite = TribalCard;
+                    break;
+                case Rewards.MoraleUP:
+                    contributor_rewardImage.sprite = MoraleUP;
+                    break;
+                case Rewards.MoraleDown:
+                    contributor_rewardImage.sprite = MoraleDown;
+                    break;
+                case Rewards.Stat_Relationship_UP:
+                    contributor_rewardImage.sprite = Stat_Relationship_UP;
+                    break;
+                case Rewards.Stat_Charisma_UP:
+                    contributor_rewardImage.sprite = Stat_Charisma_UP;
+                    break;
+                case Rewards.Stat_Intuition_UP:
+                    contributor_rewardImage.sprite = Stat_Intuition_UP;
+                    break;
+                case Rewards.Stat_Perception_UP:
+                    contributor_rewardImage.sprite = Stat_Perception_UP;
+                    break;
+                case Rewards.Stat_Deception_UP:
+                    contributor_rewardImage.sprite = Stat_Deception_UP;
+                    break;
+                case Rewards.Stat_Dexterity_UP:
+                    contributor_rewardImage.sprite = Stat_Dexterity_UP;
+                    break;
+                case Rewards.Stat_Strength_UP:
+                    contributor_rewardImage.sprite = Stat_Strength_UP;
+                    break;
+                case Rewards.Stat_Puzzle_UP:
+                    contributor_rewardImage.sprite = Stat_Puzzle_UP;
+                    break;
+                case Rewards.Stat_Consentration_UP:
+                    contributor_rewardImage.sprite = Stat_Consentration_UP;
+                    break;
+                case Rewards.Stat_Endurance_UP:
+                    contributor_rewardImage.sprite = Stat_Endurance_UP;
+                    break;
+                case Rewards.Stat_Loyalty_UP:
+                    contributor_rewardImage.sprite = Stat_Loyalty_UP;
+                    break;
+                case Rewards.Stat_Strategic_UP:
+                    contributor_rewardImage.sprite = Stat_Strategic_UP;
+                    break;
+                case Rewards.Stat_SelfControl_UP:
+                    contributor_rewardImage.sprite = Stat_SelfControl_UP;
+                    break;
+                case Rewards.Stat_AdvantageHunting_UP:
+                    contributor_rewardImage.sprite = Stat_AdvantageHunting_UP;
+                    break;
+                case Rewards.Stat_Survival_UP:
+                    contributor_rewardImage.sprite = Stat_Survival_UP;
+                    break;
+                case Rewards.Stat_Relationship_DOWN:
+                    contributor_rewardImage.sprite = Stat_Relationship_DOWN;
+                    break;
+                case Rewards.Stat_Charisma_DOWN:
+                    contributor_rewardImage.sprite = Stat_Charisma_DOWN;
+                    break;
+                case Rewards.Stat_Intuition_DOWN:
+                    contributor_rewardImage.sprite = Stat_Intuition_DOWN;
+                    break;
+                case Rewards.Stat_Perception_DOWN:
+                    contributor_rewardImage.sprite = Stat_Perception_DOWN;
+                    break;
+                case Rewards.Stat_Deception_DOWN:
+                    contributor_rewardImage.sprite = Stat_Deception_DOWN;
+                    break;
+                case Rewards.Stat_Dexterity_DOWN:
+                    contributor_rewardImage.sprite = Stat_Dexterity_DOWN;
+                    break;
+                case Rewards.Stat_Strength_DOWN:
+                    contributor_rewardImage.sprite = Stat_Strength_DOWN;
+                    break;
+                case Rewards.Stat_Puzzle_DOWN:
+                    contributor_rewardImage.sprite = Stat_Puzzle_DOWN;
+                    break;
+                case Rewards.Stat_Consentration_DOWN:
+                    contributor_rewardImage.sprite = Stat_Consentration_DOWN;
+                    break;
+                case Rewards.Stat_Endurance_DOWN:
+                    contributor_rewardImage.sprite = Stat_Endurance_DOWN;
+                    break;
+                case Rewards.Stat_Loyalty_DOWN:
+                    contributor_rewardImage.sprite = Stat_Loyalty_DOWN;
+                    break;
+                case Rewards.Stat_Strategic_DOWN:
+                    contributor_rewardImage.sprite = Stat_Strategic_DOWN;
+                    break;
+                case Rewards.Stat_SelfControl_DOWN:
+                    contributor_rewardImage.sprite = Stat_SelfControl_DOWN;
+                    break;
+                case Rewards.Stat_AdvantageHunting_DOWN:
+                    contributor_rewardImage.sprite = Stat_AdvantageHunting_DOWN;
+                    break;
+                case Rewards.Stat_Survival_DOWN:
+                    contributor_rewardImage.sprite = Stat_Survival_DOWN;
+                    break;
+
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            contributor_rewardBox.SetActive(false);
+        }
+
+        //Set General Reward
+        if (dailyTask_SO.dailyTaskList[index].generalReward != Rewards.None)
+        {
+            general_rewardBox.SetActive(true);
+            general_rewardText.text = dailyTask_SO.dailyTaskList[index].generalReward_amount.ToString();
+
+            switch (dailyTask_SO.dailyTaskList[index].generalReward)
+            {
+                case Rewards.None:
+                    general_rewardImage.sprite = null;
+                    break;
+
+                case Rewards.Outwit_Coin:
+                    general_rewardImage.sprite = Outwit_Coin;
+                    break;
+                case Rewards.Outplay_Coin:
+                    general_rewardImage.sprite = Outwit_Coin;
+                    break;
+                case Rewards.Outlast_Coin:
+                    general_rewardImage.sprite = Outlast_Coin;
+                    break;
+                case Rewards.PressureToken:
+                    general_rewardImage.sprite = PressureToken;
+                    break;
+                case Rewards.Quest:
+                    general_rewardImage.sprite = Quest;
+                    break;
+                case Rewards.TribalCard:
+                    general_rewardImage.sprite = TribalCard;
+                    break;
+                case Rewards.MoraleUP:
+                    general_rewardImage.sprite = MoraleUP;
+                    break;
+                case Rewards.MoraleDown:
+                    general_rewardImage.sprite = MoraleDown;
+                    break;
+                case Rewards.Stat_Relationship_UP:
+                    general_rewardImage.sprite = Stat_Relationship_UP;
+                    break;
+                case Rewards.Stat_Charisma_UP:
+                    general_rewardImage.sprite = Stat_Charisma_UP;
+                    break;
+                case Rewards.Stat_Intuition_UP:
+                    general_rewardImage.sprite = Stat_Intuition_UP;
+                    break;
+                case Rewards.Stat_Perception_UP:
+                    general_rewardImage.sprite = Stat_Perception_UP;
+                    break;
+                case Rewards.Stat_Deception_UP:
+                    general_rewardImage.sprite = Stat_Deception_UP;
+                    break;
+                case Rewards.Stat_Dexterity_UP:
+                    general_rewardImage.sprite = Stat_Dexterity_UP;
+                    break;
+                case Rewards.Stat_Strength_UP:
+                    general_rewardImage.sprite = Stat_Strength_UP;
+                    break;
+                case Rewards.Stat_Puzzle_UP:
+                    general_rewardImage.sprite = Stat_Puzzle_UP;
+                    break;
+                case Rewards.Stat_Consentration_UP:
+                    general_rewardImage.sprite = Stat_Consentration_UP;
+                    break;
+                case Rewards.Stat_Endurance_UP:
+                    general_rewardImage.sprite = Stat_Endurance_UP;
+                    break;
+                case Rewards.Stat_Loyalty_UP:
+                    general_rewardImage.sprite = Stat_Loyalty_UP;
+                    break;
+                case Rewards.Stat_Strategic_UP:
+                    general_rewardImage.sprite = Stat_Strategic_UP;
+                    break;
+                case Rewards.Stat_SelfControl_UP:
+                    general_rewardImage.sprite = Stat_SelfControl_UP;
+                    break;
+                case Rewards.Stat_AdvantageHunting_UP:
+                    general_rewardImage.sprite = Stat_AdvantageHunting_UP;
+                    break;
+                case Rewards.Stat_Survival_UP:
+                    general_rewardImage.sprite = Stat_Survival_UP;
+                    break;
+                case Rewards.Stat_Relationship_DOWN:
+                    general_rewardImage.sprite = Stat_Relationship_DOWN;
+                    break;
+                case Rewards.Stat_Charisma_DOWN:
+                    general_rewardImage.sprite = Stat_Charisma_DOWN;
+                    break;
+                case Rewards.Stat_Intuition_DOWN:
+                    general_rewardImage.sprite = Stat_Intuition_DOWN;
+                    break;
+                case Rewards.Stat_Perception_DOWN:
+                    general_rewardImage.sprite = Stat_Perception_DOWN;
+                    break;
+                case Rewards.Stat_Deception_DOWN:
+                    general_rewardImage.sprite = Stat_Deception_DOWN;
+                    break;
+                case Rewards.Stat_Dexterity_DOWN:
+                    general_rewardImage.sprite = Stat_Dexterity_DOWN;
+                    break;
+                case Rewards.Stat_Strength_DOWN:
+                    general_rewardImage.sprite = Stat_Strength_DOWN;
+                    break;
+                case Rewards.Stat_Puzzle_DOWN:
+                    general_rewardImage.sprite = Stat_Puzzle_DOWN;
+                    break;
+                case Rewards.Stat_Consentration_DOWN:
+                    general_rewardImage.sprite = Stat_Consentration_DOWN;
+                    break;
+                case Rewards.Stat_Endurance_DOWN:
+                    general_rewardImage.sprite = Stat_Endurance_DOWN;
+                    break;
+                case Rewards.Stat_Loyalty_DOWN:
+                    general_rewardImage.sprite = Stat_Loyalty_DOWN;
+                    break;
+                case Rewards.Stat_Strategic_DOWN:
+                    general_rewardImage.sprite = Stat_Strategic_DOWN;
+                    break;
+                case Rewards.Stat_SelfControl_DOWN:
+                    general_rewardImage.sprite = Stat_SelfControl_DOWN;
+                    break;
+                case Rewards.Stat_AdvantageHunting_DOWN:
+                    general_rewardImage.sprite = Stat_AdvantageHunting_DOWN;
+                    break;
+                case Rewards.Stat_Survival_DOWN:
+                    general_rewardImage.sprite = Stat_Survival_DOWN;
+                    break;
+
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            general_rewardBox.SetActive(false);
+        }
+
+        //Set Punishment
+        if (dailyTask_SO.dailyTaskList[index].punishment != Rewards.None)
+        {
+            punishment_rewardBox.SetActive(true);
+            punishment_rewardText.text = dailyTask_SO.dailyTaskList[index].punishment_amount.ToString();
+
+            switch (dailyTask_SO.dailyTaskList[index].punishment)
+            {
+                case Rewards.None:
+                    punishment_rewardImage.sprite = null;
+                    break;
+
+                case Rewards.Outwit_Coin:
+                    punishment_rewardImage.sprite = Outwit_Coin;
+                    break;
+                case Rewards.Outplay_Coin:
+                    punishment_rewardImage.sprite = Outwit_Coin;
+                    break;
+                case Rewards.Outlast_Coin:
+                    punishment_rewardImage.sprite = Outlast_Coin;
+                    break;
+                case Rewards.PressureToken:
+                    punishment_rewardImage.sprite = PressureToken;
+                    break;
+                case Rewards.Quest:
+                    punishment_rewardImage.sprite = Quest;
+                    break;
+                case Rewards.TribalCard:
+                    punishment_rewardImage.sprite = TribalCard;
+                    break;
+                case Rewards.MoraleUP:
+                    punishment_rewardImage.sprite = MoraleUP;
+                    break;
+                case Rewards.MoraleDown:
+                    punishment_rewardImage.sprite = MoraleDown;
+                    break;
+                case Rewards.Stat_Relationship_UP:
+                    punishment_rewardImage.sprite = Stat_Relationship_UP;
+                    break;
+                case Rewards.Stat_Charisma_UP:
+                    punishment_rewardImage.sprite = Stat_Charisma_UP;
+                    break;
+                case Rewards.Stat_Intuition_UP:
+                    punishment_rewardImage.sprite = Stat_Intuition_UP;
+                    break;
+                case Rewards.Stat_Perception_UP:
+                    punishment_rewardImage.sprite = Stat_Perception_UP;
+                    break;
+                case Rewards.Stat_Deception_UP:
+                    punishment_rewardImage.sprite = Stat_Deception_UP;
+                    break;
+                case Rewards.Stat_Dexterity_UP:
+                    punishment_rewardImage.sprite = Stat_Dexterity_UP;
+                    break;
+                case Rewards.Stat_Strength_UP:
+                    punishment_rewardImage.sprite = Stat_Strength_UP;
+                    break;
+                case Rewards.Stat_Puzzle_UP:
+                    punishment_rewardImage.sprite = Stat_Puzzle_UP;
+                    break;
+                case Rewards.Stat_Consentration_UP:
+                    punishment_rewardImage.sprite = Stat_Consentration_UP;
+                    break;
+                case Rewards.Stat_Endurance_UP:
+                    punishment_rewardImage.sprite = Stat_Endurance_UP;
+                    break;
+                case Rewards.Stat_Loyalty_UP:
+                    punishment_rewardImage.sprite = Stat_Loyalty_UP;
+                    break;
+                case Rewards.Stat_Strategic_UP:
+                    punishment_rewardImage.sprite = Stat_Strategic_UP;
+                    break;
+                case Rewards.Stat_SelfControl_UP:
+                    punishment_rewardImage.sprite = Stat_SelfControl_UP;
+                    break;
+                case Rewards.Stat_AdvantageHunting_UP:
+                    punishment_rewardImage.sprite = Stat_AdvantageHunting_UP;
+                    break;
+                case Rewards.Stat_Survival_UP:
+                    punishment_rewardImage.sprite = Stat_Survival_UP;
+                    break;
+                case Rewards.Stat_Relationship_DOWN:
+                    punishment_rewardImage.sprite = Stat_Relationship_DOWN;
+                    break;
+                case Rewards.Stat_Charisma_DOWN:
+                    punishment_rewardImage.sprite = Stat_Charisma_DOWN;
+                    break;
+                case Rewards.Stat_Intuition_DOWN:
+                    punishment_rewardImage.sprite = Stat_Intuition_DOWN;
+                    break;
+                case Rewards.Stat_Perception_DOWN:
+                    punishment_rewardImage.sprite = Stat_Perception_DOWN;
+                    break;
+                case Rewards.Stat_Deception_DOWN:
+                    punishment_rewardImage.sprite = Stat_Deception_DOWN;
+                    break;
+                case Rewards.Stat_Dexterity_DOWN:
+                    punishment_rewardImage.sprite = Stat_Dexterity_DOWN;
+                    break;
+                case Rewards.Stat_Strength_DOWN:
+                    punishment_rewardImage.sprite = Stat_Strength_DOWN;
+                    break;
+                case Rewards.Stat_Puzzle_DOWN:
+                    punishment_rewardImage.sprite = Stat_Puzzle_DOWN;
+                    break;
+                case Rewards.Stat_Consentration_DOWN:
+                    punishment_rewardImage.sprite = Stat_Consentration_DOWN;
+                    break;
+                case Rewards.Stat_Endurance_DOWN:
+                    punishment_rewardImage.sprite = Stat_Endurance_DOWN;
+                    break;
+                case Rewards.Stat_Loyalty_DOWN:
+                    punishment_rewardImage.sprite = Stat_Loyalty_DOWN;
+                    break;
+                case Rewards.Stat_Strategic_DOWN:
+                    punishment_rewardImage.sprite = Stat_Strategic_DOWN;
+                    break;
+                case Rewards.Stat_SelfControl_DOWN:
+                    punishment_rewardImage.sprite = Stat_SelfControl_DOWN;
+                    break;
+                case Rewards.Stat_AdvantageHunting_DOWN:
+                    punishment_rewardImage.sprite = Stat_AdvantageHunting_DOWN;
+                    break;
+                case Rewards.Stat_Survival_DOWN:
+                    punishment_rewardImage.sprite = Stat_Survival_DOWN;
+                    break;
+
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            punishment_rewardBox.SetActive(false);
+        }
     }
 
     void AddSign(RequirementSlot slot, string sign)

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e7441e9368c38f459252cdc8746d66e, type: 3}
+  m_Name: Quest_SO
+  m_EditorClassIdentifier: 
+  questList:
+  - name: Test
+    phase: 3
+    description: Here is more text. Let's see how many other word I can put down
+      on this card before it's too mutch an I have to extend the viewfield of the
+      box. I have no idea how many word I have written now, or how much below the
+      bottom line the text is, but I know that I can change the height size of the
+      RectTransform.
+    requirementSlot:
+      diceType: 5
+      stats: 01000000040000000d000000
+      requirement: 3
+      requirementChange: 1
+      repeat: 0
+      spacing: -300
+    reward: 7
+    amount: 2
+    panel_height: 1100

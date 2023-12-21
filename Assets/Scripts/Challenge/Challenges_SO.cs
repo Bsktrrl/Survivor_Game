@@ -35,6 +35,18 @@ public class RequirementSlotInfo
     public float spacing;
 }
 
+[Serializable]
+public class RequirementSlotInfoWithoutDescription
+{
+    public dice diceType;
+    public List<Stats> stats;
+    public int requirement;
+    public requirementChange requirementChange;
+    public int repeat;
+
+    public float spacing;
+}
+
 public enum requirementChange
 {
     None,

@@ -117,3 +117,56 @@ public enum Tier
     Epic,
     Legenday
 }
+
+public enum Rewards
+{
+    None,
+
+    Outwit_Coin,
+    Outplay_Coin,
+    Outlast_Coin,
+
+    PressureToken,
+
+    Quest,
+    TribalCard,
+
+    MoraleUP,
+    MoraleDown,
+
+    Stat_Relationship_UP,
+    Stat_Charisma_UP,
+    Stat_Intuition_UP,
+    Stat_Perception_UP,
+    Stat_Deception_UP,
+
+    Stat_Dexterity_UP,
+    Stat_Strength_UP,
+    Stat_Puzzle_UP,
+    Stat_Consentration_UP,
+    Stat_Endurance_UP,
+
+    Stat_Loyalty_UP,
+    Stat_Strategic_UP,
+    Stat_SelfControl_UP,
+    Stat_AdvantageHunting_UP,
+    Stat_Survival_UP,
+
+    Stat_Relationship_DOWN,
+    Stat_Charisma_DOWN,
+    Stat_Intuition_DOWN,
+    Stat_Perception_DOWN,
+    Stat_Deception_DOWN,
+
+    Stat_Dexterity_DOWN,
+    Stat_Strength_DOWN,
+    Stat_Puzzle_DOWN,
+    Stat_Consentration_DOWN,
+    Stat_Endurance_DOWN,
+
+    Stat_Loyalty_DOWN,
+    Stat_Strategic_DOWN,
+    Stat_SelfControl_DOWN,
+    Stat_AdvantageHunting_DOWN,
+    Stat_Survival_DOWN
+}
