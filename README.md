@@ -8,7 +8,7 @@ For this card generator I have expended upon what I've learned from making the "
 <br>
 The design for this board game is in prototype stages, but the layout logic for the code has been implemented.
 
-## The Different Setups
+## Card Types
 Castaway Cards<br>
 <img src="https://github.com/Bsktrrl/Bsktrrl.github.io/blob/main/images/SurvivorCardGenerator/CastawayCards.jpg" width="50%"/><br><br>
 Challenge Cards<br>
