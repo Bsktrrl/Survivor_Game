@@ -3,7 +3,7 @@
 ## Project Description
 As a fan of the reality TV show "Survivor", I have wanted to make a tabletop game based on it for a long time.
 With over 500 contestants reaching the merge, over 150 challenges and several attributes as crucial for surviving the game, the concept may be good for a tabletop variant. 
-For this card generator I have expended upon what I've learned from making the "Naruto Board Game Card Generator", being able to create more detailed cards.
+For this card generator I have expended upon what I've learned from making the "Naruto Board Game Card Generator", being able to create more detailed cards with improved code.
 <br>
 <br>
 The design for this board game is in prototype stages, but the layout logic for the code has been implemented.
