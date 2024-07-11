@@ -1,11 +1,12 @@
 <img src="https://github.com/Bsktrrl/Bsktrrl.github.io/blob/main/images/SurvivorCardGenerator/Create.gif" width="50%"/><br>
 
 ## Project Description
-As a fan of the reality TV show "Survivor", I have wanted to make a tabletop game based on it for a long time. With 500 contestants, over 150 challenges and several attributes as crucial for survival the game, the concept may be good for a tabletop game. 
+As a fan of the reality TV show "Survivor", I have wanted to make a tabletop game based on it for a long time.
+With over 500 contestants reaching the merge, over 150 challenges and several attributes as crucial for surviving the game, the concept may be good for a tabletop variant. 
 For this card generator I have expended upon what I've learned from making the "Naruto Board Game Card Generator", being able to create more detailed cards.
 <br>
 <br>
-The tabletop game isn't finished yet, but I like the way this program has been shaped.
+The design for this board game is in prototype stages, but the layout logic for the code has been implemented.
 
 ## The Different Setups
 Castaway Cards<br>
