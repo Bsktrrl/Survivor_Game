@@ -8,13 +8,13 @@ For this card generator I have expended upon what I've learned from making the "
 The tabletop game isn't finished yet, but I like the way this program has been shaped.
 
 ## The Different Setups
-Battle cards<br>
+Castaway Cards<br>
 <img src="https://github.com/Bsktrrl/Bsktrrl.github.io/blob/main/images/SurvivorCardGenerator/CastawayCards.jpg" width="50%"/><br><br>
-Action Cards<br>
+Challenge Cards<br>
 <img src="https://github.com/Bsktrrl/Bsktrrl.github.io/blob/main/images/SurvivorCardGenerator/ChallengeCards.jpg" width="50%"/><br><br>
-Clan Specialties<br>
+Daily Tasks<br>
 <img src="https://github.com/Bsktrrl/Bsktrrl.github.io/blob/main/images/SurvivorCardGenerator/DailyTasks.jpg" width="50%"/><br><br>
-Event Cards<br>
+Quest Cards<br>
 <img src="https://github.com/Bsktrrl/Bsktrrl.github.io/blob/main/images/SurvivorCardGenerator/QuestCards.jpg" width="50%"/><br><br>
-Event Cards<br>
+Tribal Cards<br>
 <img src="https://github.com/Bsktrrl/Bsktrrl.github.io/blob/main/images/SurvivorCardGenerator/TribalCards.jpg" width="50%"/><br><br>
