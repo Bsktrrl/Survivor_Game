@@ -497,7 +497,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1693139847, guid: a8b3ad1534db9dd4eb60223c33211576, type: 3}
+  m_Sprite: {fileID: 519136132, guid: a8b3ad1534db9dd4eb60223c33211576, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -565,6 +565,7 @@ Transform:
   m_Children:
   - {fileID: 2056065078}
   - {fileID: 1946292000}
+  - {fileID: 2141492627}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &277120181
@@ -754,7 +755,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2
+  m_text: 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
   m_sharedMaterial: {fileID: 8559762881318531647, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
@@ -1149,7 +1150,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1
+  m_text: 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
   m_sharedMaterial: {fileID: 8559762881318531647, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
@@ -1158,8 +1159,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283714781
-  m_fontColor: {r: 0.8679245, g: 0.29804197, b: 0.3275914, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1504,8 +1505,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4283714781
+  m_fontColor: {r: 0.8679245, g: 0.29804197, b: 0.3275914, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1821,7 +1822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9529412, g: 0.90588236, b: 0.78431374, a: 1}
+  m_Color: {r: 0.83137256, g: 0.83137256, b: 0.83137256, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2341,7 +2342,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 548
+  m_text: 345
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
   m_sharedMaterial: {fileID: 8559762881318531647, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
@@ -2642,7 +2643,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3
+  m_text: 5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
   m_sharedMaterial: {fileID: 8559762881318531647, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
@@ -2651,8 +2652,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4281716538
+  m_fontColor: {r: 0.22794907, g: 0.8113208, b: 0.20971872, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3184,7 +3185,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1
+  m_text: 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
   m_sharedMaterial: {fileID: 8559762881318531647, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
@@ -3193,8 +3194,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283714781
-  m_fontColor: {r: 0.8679245, g: 0.29804197, b: 0.3275914, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4049,9 +4050,9 @@ MonoBehaviour:
 
     <size=20%>
 
-    <size=100%>Hello,
-    here''s an ability for you all to enjoy to the fullest. Just let me know if there
-    are anything I can make here.'
+    <size=100%>When
+    another Player uses a Pressure token, this Castaway gains one. You get all remaining
+    Pressure tokens when this Castaw'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
   m_sharedMaterial: {fileID: 8559762881318531647, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
@@ -4078,7 +4079,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60.75
+  m_fontSize: 52.55
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4177,7 +4178,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 4
+  m_text: 6
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
   m_sharedMaterial: {fileID: 8559762881318531647, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
@@ -4186,8 +4187,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278251505
+  m_fontColor: {r: 0.9433962, g: 0.93892515, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4311,7 +4312,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 4
+  m_text: 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
   m_sharedMaterial: {fileID: 8559762881318531647, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
@@ -4445,7 +4446,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 74654249baceddd44afa41eea7d0efee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e0bba216416bf0f40bc866d978fe6b5b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4595,7 +4596,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2
+  m_text: 4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
   m_sharedMaterial: {fileID: 8559762881318531647, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
@@ -5008,7 +5009,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tyson Apostol
+  m_text: Tony Vlachos
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
   m_sharedMaterial: {fileID: 8559762881318531647, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
@@ -5134,7 +5135,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4760218fa527a3f4181af7eda4e6916f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 812b053d64555fb4595c6deb98e24378, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5254,7 +5255,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1
+  m_text: 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
   m_sharedMaterial: {fileID: 8559762881318531647, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
@@ -5465,7 +5466,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 6
+  m_text: 4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
   m_sharedMaterial: {fileID: 8559762881318531647, guid: 1bec465274ffa4146b787983b2331b75, type: 2}
@@ -5474,8 +5475,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278251505
-  m_fontColor: {r: 0.9433962, g: 0.93892515, b: 0, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5910,6 +5911,125 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111342828}
   m_CullTransparentMesh: 1
+--- !u!1 &2141492626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2141492627}
+  - component: {fileID: 2141492628}
+  - component: {fileID: 2141492630}
+  - component: {fileID: 2141492629}
+  m_Layer: 0
+  m_Name: Excel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2141492627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141492626}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 276710908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2141492628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141492626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb91e5cabda15e4448710b4b1f58971a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  excelSheet: {fileID: 4900000, guid: bb1e43f6995fad94ba809d3400abab7f, type: 3}
+  startRow: 2
+  columns: 29
+  newDataObjectList:
+    dataObjectList: []
+--- !u!114 &2141492629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141492626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb20f7b23680794a9ac7bb80bc12133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name_Text: {fileID: 1909373454}
+  character_image: {fileID: 1591961252}
+  ability_text: {fileID: 1496321383}
+  popularity_text: {fileID: 743569265}
+  morale_Track: {fileID: 255545384}
+  stat_Relationship_Text: {fileID: 1977882808}
+  stat_Charisma_Text: {fileID: 1151514247}
+  stat_Intuision_Text: {fileID: 290640673}
+  stat_Persuation_Text: {fileID: 1710534861}
+  stat_Deception_Text: {fileID: 811194343}
+  stat_Dexterity_Text: {fileID: 2111342830}
+  stat_Strength_Text: {fileID: 1532364899}
+  stat_Puzzle_Text: {fileID: 2008596067}
+  stat_Consentration_Text: {fileID: 1177786175}
+  stat_Endurance_Text: {fileID: 738878658}
+  stat_Loyality_Text: {fileID: 374671607}
+  stat_Strategic_Text: {fileID: 477737480}
+  stat_SelfControl_Text: {fileID: 1386566236}
+  stat_Advantages_Text: {fileID: 1570903659}
+  stat_Survival_Text: {fileID: 1172939017}
+  season_Logo: {fileID: 1929536810}
+--- !u!114 &2141492630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141492626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d4429f8c608f314ea8a069e12fd7708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeCard: 0
+  activeDataObject:
+    fullName: 
+    ID: 
+    season: 
+    morale: 
+    popularity: 
+    ability: 
+    outwit_Relation: 
+    outwit_Charisma: 
+    outwit_Intuition: 
+    outwit_Persuasion: 
+    outwit_Deception: 
+    outplay_Dexterity: 
+    outplay_Strength: 
+    outplay_Puzzle: 
+    outplay_Concentration: 
+    outplay_Endurance: 
+    outlast_Loyalty: 
+    outlast_Strategic: 
+    outlast_SelfControl: 
+    outlast_Advantages: 
+    outlast_Survival: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

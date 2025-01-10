@@ -40,16 +40,16 @@ public class CastawayCreator : Singleton<CastawayCreator>
 
     [Header("Morale_Track")]
     public Image morale_Track;
-    [SerializeField] Sprite morale_1;
-    [SerializeField] Sprite morale_2;
-    [SerializeField] Sprite morale_3;
-    [SerializeField] Sprite morale_4;
-    [SerializeField] Sprite morale_5;
-    [SerializeField] Sprite morale_6;
-    [SerializeField] Sprite morale_7;
-    [SerializeField] Sprite morale_8;
-    [SerializeField] Sprite morale_9;
-    [SerializeField] Sprite morale_10;
+    public Sprite morale_1;
+    public Sprite morale_2;
+    public Sprite morale_3;
+    public Sprite morale_4;
+    public Sprite morale_5;
+    public Sprite morale_6;
+    public Sprite morale_7;
+    public Sprite morale_8;
+    public Sprite morale_9;
+    public Sprite morale_10;
 
     [Header("Stats_text")]
     [SerializeField] TextMeshProUGUI stat_Relationship_Text;
