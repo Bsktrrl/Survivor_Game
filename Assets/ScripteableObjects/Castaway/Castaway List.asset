@@ -13,26 +13,26 @@ MonoBehaviour:
   m_Name: Castaway List
   m_EditorClassIdentifier: 
   character_List:
-  - name: Tyson Apostol
-    image: {fileID: 21300000, guid: 74654249baceddd44afa41eea7d0efee, type: 3}
-    season: 17
-    popularity: 548
-    morale: 10
+  - name: Tony Vlachos
+    image: {fileID: 21300000, guid: e0bba216416bf0f40bc866d978fe6b5b, type: 3}
+    season: 27
+    popularity: 345
+    morale: 9
     tier: 0
-    ability: This is the ability to this Castaway that can be used by the Player
-      as long as the Castaway is in the game
-    Relationship: 1
-    Charisma: 1
-    Intuision: 2
-    Persuation: 2
-    Deception: 3
+    ability: When another Player uses a Pressure token, this Castaway gains one.
+      You get all remaining Pressure tokens when this Castaw
+    Relationship: 2
+    Charisma: 3
+    Intuision: 3
+    Persuation: 4
+    Deception: 5
     Dexterity: 3
-    Strength: 4
-    Puzzle: 6
+    Strength: 6
+    Puzzle: 4
     Consentration: 5
     Endurance: 5
-    Loyality: 1
+    Loyality: 3
     Strategic: 2
     SelfControl: 3
-    Advantages: 4
+    Advantages: 3
     Survival: 5
