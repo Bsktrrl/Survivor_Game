@@ -7,23 +7,30 @@ public class ControlPanel : Singleton<ControlPanel>
     [Header("Settings")]
     public int activeCard;
 
-    [Header("Active Data Object")]
-    public DataObject activeDataObject;
-
 
     //--------------------
 
 
-    public void UpdateActiveDataObject()
+    public void SetDataObjectActive(int index)
     {
-        if (activeCard - 1 <= ReadExcelFile.Instance.newDataObjectList.dataObjectList.Length - 1
-            && activeCard - 1 >= 0)
+        activeCard = index;
+
+        if (activeCard < 0)
+            activeCard = 0;
+        else if (activeCard > 352)
+            activeCard = 352;
+    }
+    public void SetRandomDataObjectActive()
+    {
+        int rng;
+
+        rng = Random.Range(0, ReadExcelFile.Instance.newDataObjectList.dataObjectList.Length);
+
+        while (activeCard == rng + 1)
         {
-            activeDataObject = ReadExcelFile.Instance.newDataObjectList.dataObjectList[activeCard - 1];
+            rng = Random.Range(0, ReadExcelFile.Instance.newDataObjectList.dataObjectList.Length);
         }
-        else
-        {
-            activeDataObject = null;
-        }
+
+        activeCard = rng + 1;
     }
 }
