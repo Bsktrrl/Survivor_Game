@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class PrintCastaway : MonoBehaviour
 {
-    [SerializeField] Castaway_SO character_SO;
-
     private void Update()
     {
         //Take Screenshot
@@ -17,7 +15,7 @@ public class PrintCastaway : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.A))
         {
-            StartCoroutine(PrintAllCharacters());
+            //StartCoroutine(PrintAllCharacters());
         }
     }
 
@@ -27,19 +25,19 @@ public class PrintCastaway : MonoBehaviour
 
         print("Take a Screenshot");
     }
-    IEnumerator PrintAllCharacters()
-    {
-        CastawayCreator.Instance.isPrinting = true;
+    //IEnumerator PrintAllCharacters()
+    //{
+    //    CastawayCreator.Instance.isPrinting = true;
 
-        for (int i = 0; i < character_SO.character_List.Count; i++)
-        {
-            CastawayCreator.Instance.SetDisplayedCard(i);
+    //    for (int i = 0; i < character_SO.character_List.Count; i++)
+    //    {
+    //        CastawayCreator.Instance.SetDisplayedCard(i);
 
-            yield return new WaitForSeconds(0.1f);
-            ScreenCapture.CaptureScreenshot("Castaway - " + character_SO.character_List[i].name + ".png", 1);
-            yield return new WaitForSeconds(0.1f);
-        }
+    //        yield return new WaitForSeconds(0.1f);
+    //        ScreenCapture.CaptureScreenshot("Castaway - " + character_SO.character_List[i].name + ".png", 1);
+    //        yield return new WaitForSeconds(0.1f);
+    //    }
 
-        CastawayCreator.Instance.isPrinting = false;
-    }
+    //    CastawayCreator.Instance.isPrinting = false;
+    //}
 }
