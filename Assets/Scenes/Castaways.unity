@@ -5979,6 +5979,16 @@ MonoBehaviour:
   ability_text: {fileID: 1496321383}
   popularity_text: {fileID: 743569265}
   morale_Track: {fileID: 255545384}
+  morale_1: {fileID: 624220939, guid: a8b3ad1534db9dd4eb60223c33211576, type: 3}
+  morale_2: {fileID: -1833475754, guid: a8b3ad1534db9dd4eb60223c33211576, type: 3}
+  morale_3: {fileID: -732878859, guid: a8b3ad1534db9dd4eb60223c33211576, type: 3}
+  morale_4: {fileID: -1191305579, guid: a8b3ad1534db9dd4eb60223c33211576, type: 3}
+  morale_5: {fileID: -106069616, guid: a8b3ad1534db9dd4eb60223c33211576, type: 3}
+  morale_6: {fileID: -1057721678, guid: a8b3ad1534db9dd4eb60223c33211576, type: 3}
+  morale_7: {fileID: 1932608836, guid: a8b3ad1534db9dd4eb60223c33211576, type: 3}
+  morale_8: {fileID: -691712091, guid: a8b3ad1534db9dd4eb60223c33211576, type: 3}
+  morale_9: {fileID: 519136132, guid: a8b3ad1534db9dd4eb60223c33211576, type: 3}
+  morale_10: {fileID: -1693139847, guid: a8b3ad1534db9dd4eb60223c33211576, type: 3}
   stat_Relationship_Text: {fileID: 1977882808}
   stat_Charisma_Text: {fileID: 1151514247}
   stat_Intuision_Text: {fileID: 290640673}
@@ -5994,6 +6004,9 @@ MonoBehaviour:
   stat_SelfControl_Text: {fileID: 1386566236}
   stat_Advantages_Text: {fileID: 1570903659}
   stat_Survival_Text: {fileID: 1172939017}
+  lowest_Color: {r: 0.8666667, g: 0.29803923, b: 0.32941177, a: 1}
+  highest_Color: {r: 0.22745098, g: 0.8117647, b: 0.20784314, a: 1}
+  best_Color: {r: 0.94509804, g: 0.9372549, b: 0, a: 1}
   season_Logo: {fileID: 1929536810}
 --- !u!114 &2141492630
 MonoBehaviour:

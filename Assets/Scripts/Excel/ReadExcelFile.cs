@@ -44,103 +44,103 @@ public class ReadExcelFile : Singleton<ReadExcelFile>
 
             //Name
             if (excelData[columns * (i + startRow - 1) + 2] != "")
-                newDataObjectList.dataObjectList[i].fullName = excelData[columns * (i + startRow - 1) + 2];
+                newDataObjectList.dataObjectList[i].fullName = excelData[columns * (i + startRow - 1) + 2].Trim();
             else
                 newDataObjectList.dataObjectList[i].fullName = "";
 
             //ID
             if (excelData[columns * (i + startRow - 1) + 1] != "")
-                newDataObjectList.dataObjectList[i].ID = excelData[columns * (i + startRow - 1) + 1];
+                newDataObjectList.dataObjectList[i].ID = excelData[columns * (i + startRow - 1) + 1].Trim();
             else
                 newDataObjectList.dataObjectList[i].ID = "";
 
             //Season
             if (excelData[columns * (i + startRow - 1) + 3] != "")
-                newDataObjectList.dataObjectList[i].season = excelData[columns * (i + startRow - 1) + 3];
+                newDataObjectList.dataObjectList[i].season = excelData[columns * (i + startRow - 1) + 3].Trim();
             else
                 newDataObjectList.dataObjectList[i].season = "";
 
             //Popularity
             if (excelData[columns * (i + startRow - 1) + 4] != "")
-                newDataObjectList.dataObjectList[i].popularity = excelData[columns * (i + startRow - 1) + 4];
+                newDataObjectList.dataObjectList[i].popularity = excelData[columns * (i + startRow - 1) + 4].Trim();
             else
                 newDataObjectList.dataObjectList[i].popularity = "";
 
             //Morale
             if (excelData[columns * (i + startRow - 1) + 25] != "")
-                newDataObjectList.dataObjectList[i].morale = excelData[columns * (i + startRow - 1) + 25];
+                newDataObjectList.dataObjectList[i].morale = excelData[columns * (i + startRow - 1) + 25].Trim();
             else
                 newDataObjectList.dataObjectList[i].morale = "";
 
             //Morale
             if (excelData[columns * (i + startRow - 1) + 28] != "")
-                newDataObjectList.dataObjectList[i].ability = excelData[columns * (i + startRow - 1) + 28];
+                newDataObjectList.dataObjectList[i].ability = excelData[columns * (i + startRow - 1) + 28].Trim();
             else
                 newDataObjectList.dataObjectList[i].ability = "";
 
             //Outwit
             if (excelData[columns * (i + startRow - 1) + 6] != "")
-                newDataObjectList.dataObjectList[i].outwit_Relation = excelData[columns * (i + startRow - 1) + 6];
+                newDataObjectList.dataObjectList[i].outwit_Relation = excelData[columns * (i + startRow - 1) + 6].Trim();
             else
                 newDataObjectList.dataObjectList[i].outwit_Relation = "";
             if (excelData[columns * (i + startRow - 1) + 7] != "")
-                newDataObjectList.dataObjectList[i].outwit_Charisma = excelData[columns * (i + startRow - 1) + 7];
+                newDataObjectList.dataObjectList[i].outwit_Charisma = excelData[columns * (i + startRow - 1) + 7].Trim();
             else
                 newDataObjectList.dataObjectList[i].outwit_Charisma = "";
             if (excelData[columns * (i + startRow - 1) + 8] != "")
-                newDataObjectList.dataObjectList[i].outwit_Intuition = excelData[columns * (i + startRow - 1) + 8];
+                newDataObjectList.dataObjectList[i].outwit_Intuition = excelData[columns * (i + startRow - 1) + 8].Trim();
             else
                 newDataObjectList.dataObjectList[i].outwit_Intuition = "";
             if (excelData[columns * (i + startRow - 1) + 9] != "")
-                newDataObjectList.dataObjectList[i].outwit_Persuasion = excelData[columns * (i + startRow - 1) + 9];
+                newDataObjectList.dataObjectList[i].outwit_Persuasion = excelData[columns * (i + startRow - 1) + 9].Trim();
             else
                 newDataObjectList.dataObjectList[i].outwit_Persuasion = "";
             if (excelData[columns * (i + startRow - 1) + 10] != "")
-                newDataObjectList.dataObjectList[i].outwit_Deception = excelData[columns * (i + startRow - 1) + 10];
+                newDataObjectList.dataObjectList[i].outwit_Deception = excelData[columns * (i + startRow - 1) + 10].Trim();
             else
                 newDataObjectList.dataObjectList[i].outwit_Deception = "";
 
             //Outplay
             if (excelData[columns * (i + startRow - 1) + 12] != "")
-                newDataObjectList.dataObjectList[i].outplay_Dexterity = excelData[columns * (i + startRow - 1) + 12];
+                newDataObjectList.dataObjectList[i].outplay_Dexterity = excelData[columns * (i + startRow - 1) + 12].Trim();
             else
                 newDataObjectList.dataObjectList[i].outplay_Dexterity = "";
             if (excelData[columns * (i + startRow - 1) + 13] != "")
-                newDataObjectList.dataObjectList[i].outplay_Strength = excelData[columns * (i + startRow - 1) + 13];
+                newDataObjectList.dataObjectList[i].outplay_Strength = excelData[columns * (i + startRow - 1) + 13].Trim();
             else
                 newDataObjectList.dataObjectList[i].outplay_Strength = "";
             if (excelData[columns * (i + startRow - 1) + 14] != "")
-                newDataObjectList.dataObjectList[i].outplay_Puzzle = excelData[columns * (i + startRow - 1) + 14];
+                newDataObjectList.dataObjectList[i].outplay_Puzzle = excelData[columns * (i + startRow - 1) + 14].Trim();
             else
                 newDataObjectList.dataObjectList[i].outplay_Puzzle = "";
             if (excelData[columns * (i + startRow - 1) + 15] != "")
-                newDataObjectList.dataObjectList[i].outplay_Concentration = excelData[columns * (i + startRow - 1) + 15];
+                newDataObjectList.dataObjectList[i].outplay_Concentration = excelData[columns * (i + startRow - 1) + 15].Trim();
             else
                 newDataObjectList.dataObjectList[i].outplay_Concentration = "";
             if (excelData[columns * (i + startRow - 1) + 16] != "")
-                newDataObjectList.dataObjectList[i].outplay_Endurance = excelData[columns * (i + startRow - 1) + 16];
+                newDataObjectList.dataObjectList[i].outplay_Endurance = excelData[columns * (i + startRow - 1) + 16].Trim();
             else
                 newDataObjectList.dataObjectList[i].outplay_Endurance = "";
 
             //Outlast
             if (excelData[columns * (i + startRow - 1) + 18] != "")
-                newDataObjectList.dataObjectList[i].outlast_Loyalty = excelData[columns * (i + startRow - 1) + 18];
+                newDataObjectList.dataObjectList[i].outlast_Loyalty = excelData[columns * (i + startRow - 1) + 18].Trim();
             else
                 newDataObjectList.dataObjectList[i].outlast_Loyalty = "";
             if (excelData[columns * (i + startRow - 1) + 19] != "")
-                newDataObjectList.dataObjectList[i].outlast_Strategic = excelData[columns * (i + startRow - 1) + 19];
+                newDataObjectList.dataObjectList[i].outlast_Strategic = excelData[columns * (i + startRow - 1) + 19].Trim();
             else
                 newDataObjectList.dataObjectList[i].outlast_Strategic = "";
             if (excelData[columns * (i + startRow - 1) + 20] != "")
-                newDataObjectList.dataObjectList[i].outlast_SelfControl = excelData[columns * (i + startRow - 1) + 20];
+                newDataObjectList.dataObjectList[i].outlast_SelfControl = excelData[columns * (i + startRow - 1) + 20].Trim();
             else
                 newDataObjectList.dataObjectList[i].outlast_SelfControl = "";
             if (excelData[columns * (i + startRow - 1) + 21] != "")
-                newDataObjectList.dataObjectList[i].outlast_Advantages = excelData[columns * (i + startRow - 1) + 21];
+                newDataObjectList.dataObjectList[i].outlast_Advantages = excelData[columns * (i + startRow - 1) + 21].Trim();
             else
                 newDataObjectList.dataObjectList[i].outlast_Advantages = "";
             if (excelData[columns * (i + startRow - 1) + 22] != "")
-                newDataObjectList.dataObjectList[i].outlast_Survival = excelData[columns * (i + startRow - 1) + 22];
+                newDataObjectList.dataObjectList[i].outlast_Survival = excelData[columns * (i + startRow - 1) + 22].Trim();
             else
                 newDataObjectList.dataObjectList[i].outlast_Survival = "";
         }

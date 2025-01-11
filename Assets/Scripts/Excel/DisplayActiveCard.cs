@@ -20,6 +20,16 @@ public class DisplayActiveCard : Singleton<DisplayActiveCard>
 
     [Header("Morale_Track")]
     public Image morale_Track;
+    public Sprite morale_1;
+    public Sprite morale_2;
+    public Sprite morale_3;
+    public Sprite morale_4;
+    public Sprite morale_5;
+    public Sprite morale_6;
+    public Sprite morale_7;
+    public Sprite morale_8;
+    public Sprite morale_9;
+    public Sprite morale_10;
 
     [Header("Stats_text")]
     [SerializeField] TextMeshProUGUI stat_Relationship_Text;
@@ -39,6 +49,11 @@ public class DisplayActiveCard : Singleton<DisplayActiveCard>
     [SerializeField] TextMeshProUGUI stat_SelfControl_Text;
     [SerializeField] TextMeshProUGUI stat_Advantages_Text;
     [SerializeField] TextMeshProUGUI stat_Survival_Text;
+
+    [Header("Stat Colors")]
+    public Color lowest_Color;
+    public Color highest_Color;
+    public Color best_Color;
 
     [Header("Season_Logo")]
     public Image season_Logo;
@@ -66,12 +81,15 @@ public class DisplayActiveCard : Singleton<DisplayActiveCard>
         {
             name_Text.text = ControlPanel.Instance.activeDataObject.fullName;
 
-            string imageNameTemp = "Characters/CastawaysImages/" + GetSeasonName(ControlPanel.Instance.activeDataObject.season) + ControlPanel.Instance.activeDataObject.fullName;
+            string imageNameTemp = "CastawaysImages/" + GetSeasonName(ControlPanel.Instance.activeDataObject.season) + "/" + ControlPanel.Instance.activeDataObject.fullName;
             character_image.sprite = Resources.Load<Sprite>(imageNameTemp);
 
             ability_text.text = ControlPanel.Instance.activeDataObject.ability;
             popularity_text.text = ControlPanel.Instance.activeDataObject.popularity.ToString();
-            morale_Track.sprite = GetMoraleSprite(ControlPanel.Instance.activeDataObject.morale);
+            GetMoraleSprite(ControlPanel.Instance.activeDataObject.morale);
+
+            string seasonNameTemp = "Logo/" + GetSeasonName(ControlPanel.Instance.activeDataObject.season);
+            season_Logo.sprite = Resources.Load<Sprite>(seasonNameTemp);
 
             stat_Relationship_Text.text = ControlPanel.Instance.activeDataObject.outwit_Relation.ToString();
             stat_Charisma_Text.text = ControlPanel.Instance.activeDataObject.outwit_Charisma.ToString();
@@ -90,6 +108,25 @@ public class DisplayActiveCard : Singleton<DisplayActiveCard>
             stat_SelfControl_Text.text = ControlPanel.Instance.activeDataObject.outlast_SelfControl.ToString();
             stat_Advantages_Text.text = ControlPanel.Instance.activeDataObject.outlast_Advantages.ToString();
             stat_Survival_Text.text = ControlPanel.Instance.activeDataObject.outlast_Survival.ToString();
+
+            //Set Color on StatText
+            GetStatNumberColors(stat_Relationship_Text);
+            GetStatNumberColors(stat_Charisma_Text);
+            GetStatNumberColors(stat_Intuision_Text);
+            GetStatNumberColors(stat_Persuation_Text);
+            GetStatNumberColors(stat_Deception_Text);
+
+            GetStatNumberColors(stat_Dexterity_Text);
+            GetStatNumberColors(stat_Strength_Text);
+            GetStatNumberColors(stat_Puzzle_Text);
+            GetStatNumberColors(stat_Consentration_Text);
+            GetStatNumberColors(stat_Endurance_Text);
+
+            GetStatNumberColors(stat_Loyality_Text);
+            GetStatNumberColors(stat_Strategic_Text);
+            GetStatNumberColors(stat_SelfControl_Text);
+            GetStatNumberColors(stat_Advantages_Text);
+            GetStatNumberColors(stat_Survival_Text);
         }
         else
         {
@@ -164,7 +201,7 @@ public class DisplayActiveCard : Singleton<DisplayActiveCard>
         else if (season == 21.ToString())
             return "S21 - Nicaragua";
         else if (season == 22.ToString())
-            return "S22 - Redemtion Island";
+            return "S22 - Redemption Island";
         else if (season == 23.ToString())
             return "S23 - South Pacific";
         else if (season == 24.ToString())
@@ -201,29 +238,122 @@ public class DisplayActiveCard : Singleton<DisplayActiveCard>
 
         return null;
     }
-    Sprite GetMoraleSprite(string morale)
+    void GetMoraleSprite(string morale)
     {
-        if (morale == 1.ToString())
-            return CastawayCreator.instance.morale_1;
-        else if (morale == 2.ToString())
-            return CastawayCreator.instance.morale_2;
-        else if (morale == 3.ToString())
-            return CastawayCreator.instance.morale_3;
-        else if (morale == 4.ToString())
-            return CastawayCreator.instance.morale_4;
-        else if (morale == 5.ToString())
-            return CastawayCreator.instance.morale_5;
-        else if (morale == 6.ToString())
-            return CastawayCreator.instance.morale_6;
-        else if (morale == 7.ToString())
-            return CastawayCreator.instance.morale_7;
-        else if (morale == 8.ToString())
-            return CastawayCreator.instance.morale_8;
-        else if (morale == 9.ToString())
-            return CastawayCreator.instance.morale_9;
-        else if (morale == 10.ToString())
-            return CastawayCreator.instance.morale_10;
+        if (morale == "1")
+            morale_Track.sprite = morale_1;
+        else if (morale == "2")
+            morale_Track.sprite = morale_2;
+        else if (morale == "3")
+            morale_Track.sprite = morale_3;
+        else if (morale == "4")
+            morale_Track.sprite = morale_4;
+        else if (morale == "5")
+            morale_Track.sprite = morale_5;
+        else if (morale == "6")
+            morale_Track.sprite = morale_6;
+        else if (morale == "7")
+            morale_Track.sprite = morale_7;
+        else if (morale == "8")
+            morale_Track.sprite = morale_8;
+        else if (morale == "9")
+            morale_Track.sprite = morale_9;
+        else if (morale == "10")
+            morale_Track.sprite = morale_10;
+        else
+            morale_Track.sprite = null;
+    }
 
-        return null;
+    int GetLowestStatNumber()
+    {
+        int lowestNumber = 0;
+
+        lowestNumber = int.Parse(stat_Relationship_Text.text);
+
+        if (int.Parse(stat_Charisma_Text.text) < lowestNumber && int.Parse(stat_Charisma_Text.text) >= 0)
+            lowestNumber = int.Parse(stat_Charisma_Text.text);
+        if (int.Parse(stat_Intuision_Text.text) < lowestNumber && int.Parse(stat_Intuision_Text.text) >= 0)
+            lowestNumber = int.Parse(stat_Intuision_Text.text);
+        if (int.Parse(stat_Persuation_Text.text) < lowestNumber && int.Parse(stat_Persuation_Text.text) >= 0)
+            lowestNumber = int.Parse(stat_Persuation_Text.text);
+        if (int.Parse(stat_Deception_Text.text) < lowestNumber && int.Parse(stat_Deception_Text.text) >= 0)
+            lowestNumber = int.Parse(stat_Deception_Text.text);
+
+        if (int.Parse(stat_Dexterity_Text.text) < lowestNumber && int.Parse(stat_Dexterity_Text.text) >= 0)
+            lowestNumber = int.Parse(stat_Dexterity_Text.text);
+        if (int.Parse(stat_Strength_Text.text) < lowestNumber && int.Parse(stat_Strength_Text.text) >= 0)
+            lowestNumber = int.Parse(stat_Strength_Text.text);
+        if (int.Parse(stat_Puzzle_Text.text) < lowestNumber && int.Parse(stat_Puzzle_Text.text) >= 0)
+            lowestNumber = int.Parse(stat_Puzzle_Text.text);
+        if (int.Parse(stat_Consentration_Text.text) < lowestNumber && int.Parse(stat_Consentration_Text.text) >= 0)
+            lowestNumber = int.Parse(stat_Consentration_Text.text);
+        if (int.Parse(stat_Endurance_Text.text) < lowestNumber && int.Parse(stat_Endurance_Text.text) >= 0)
+            lowestNumber = int.Parse(stat_Endurance_Text.text);
+
+        if (int.Parse(stat_Loyality_Text.text) < lowestNumber && int.Parse(stat_Loyality_Text.text) >= 0)
+            lowestNumber = int.Parse(stat_Loyality_Text.text);
+        if (int.Parse(stat_Strategic_Text.text) < lowestNumber && int.Parse(stat_Strategic_Text.text) >= 0)
+            lowestNumber = int.Parse(stat_Strategic_Text.text);
+        if (int.Parse(stat_SelfControl_Text.text) < lowestNumber && int.Parse(stat_SelfControl_Text.text) >= 0)
+            lowestNumber = int.Parse(stat_SelfControl_Text.text);
+        if (int.Parse(stat_Advantages_Text.text) < lowestNumber && int.Parse(stat_Advantages_Text.text) >= 0)
+            lowestNumber = int.Parse(stat_Advantages_Text.text);
+        if (int.Parse(stat_Survival_Text.text) < lowestNumber && int.Parse(stat_Survival_Text.text) >= 0)
+            lowestNumber = int.Parse(stat_Survival_Text.text);
+
+        return lowestNumber;
+    }
+    int GetHighestStatNumber()
+    {
+        int lowestNumber = 0;
+
+        lowestNumber = int.Parse(stat_Relationship_Text.text);
+
+        if (int.Parse(stat_Charisma_Text.text) > lowestNumber && int.Parse(stat_Charisma_Text.text) <= 5)
+            lowestNumber = int.Parse(stat_Charisma_Text.text);
+        if (int.Parse(stat_Intuision_Text.text) > lowestNumber && int.Parse(stat_Intuision_Text.text) <= 5)
+            lowestNumber = int.Parse(stat_Intuision_Text.text);
+        if (int.Parse(stat_Persuation_Text.text) > lowestNumber && int.Parse(stat_Persuation_Text.text) <= 5)
+            lowestNumber = int.Parse(stat_Persuation_Text.text);
+        if (int.Parse(stat_Deception_Text.text) > lowestNumber && int.Parse(stat_Deception_Text.text) <= 5)
+            lowestNumber = int.Parse(stat_Deception_Text.text);
+
+        if (int.Parse(stat_Dexterity_Text.text) > lowestNumber && int.Parse(stat_Dexterity_Text.text) <= 5)
+            lowestNumber = int.Parse(stat_Dexterity_Text.text);
+        if (int.Parse(stat_Strength_Text.text) > lowestNumber && int.Parse(stat_Strength_Text.text) <= 5)
+            lowestNumber = int.Parse(stat_Strength_Text.text);
+        if (int.Parse(stat_Puzzle_Text.text) > lowestNumber && int.Parse(stat_Puzzle_Text.text) <= 5)
+            lowestNumber = int.Parse(stat_Puzzle_Text.text);
+        if (int.Parse(stat_Consentration_Text.text) > lowestNumber && int.Parse(stat_Consentration_Text.text) <= 5)
+            lowestNumber = int.Parse(stat_Consentration_Text.text);
+        if (int.Parse(stat_Endurance_Text.text) > lowestNumber && int.Parse(stat_Endurance_Text.text) <= 5)
+            lowestNumber = int.Parse(stat_Endurance_Text.text);
+
+        if (int.Parse(stat_Loyality_Text.text) > lowestNumber && int.Parse(stat_Loyality_Text.text) <= 5)
+            lowestNumber = int.Parse(stat_Loyality_Text.text);
+        if (int.Parse(stat_Strategic_Text.text) > lowestNumber && int.Parse(stat_Strategic_Text.text) <= 5)
+            lowestNumber = int.Parse(stat_Strategic_Text.text);
+        if (int.Parse(stat_SelfControl_Text.text) > lowestNumber && int.Parse(stat_SelfControl_Text.text) <= 5)
+            lowestNumber = int.Parse(stat_SelfControl_Text.text);
+        if (int.Parse(stat_Advantages_Text.text) > lowestNumber && int.Parse(stat_Advantages_Text.text) <= 5)
+            lowestNumber = int.Parse(stat_Advantages_Text.text);
+        if (int.Parse(stat_Survival_Text.text) > lowestNumber && int.Parse(stat_Survival_Text.text) <= 5)
+            lowestNumber = int.Parse(stat_Survival_Text.text);
+
+        return lowestNumber;
+    }
+
+    void GetStatNumberColors(TextMeshProUGUI text)
+    {
+        text.color = Color.black;
+
+        if (int.Parse(text.text) == GetLowestStatNumber())
+            text.color = lowest_Color;
+        else if (int.Parse(text.text) == GetHighestStatNumber())
+            text.color = highest_Color;
+        else if (int.Parse(text.text) > GetHighestStatNumber())
+            text.color = best_Color;
+        else
+            text.color = Color.black;
     }
 }

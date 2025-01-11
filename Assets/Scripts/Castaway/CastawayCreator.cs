@@ -28,15 +28,15 @@ public class CastawayCreator : Singleton<CastawayCreator>
 
     [Header("Tier BG Colors")]
     public Image bg_Image;
-    [SerializeField] Color normal_Color;
-    [SerializeField] Color rare_Color;
-    [SerializeField] Color epic_Color;
-    [SerializeField] Color legendaryl_Color;
+    public Color normal_Color;
+    public Color rare_Color;
+    public Color epic_Color;
+    public Color legendaryl_Color;
 
     [Header("Stat Colors")]
-    [SerializeField] Color lowest_Color;
-    [SerializeField] Color highest_Color;
-    [SerializeField] Color best_Color;
+    public Color lowest_Color;
+    public Color highest_Color;
+    public Color best_Color;
 
     [Header("Morale_Track")]
     public Image morale_Track;
@@ -126,10 +126,10 @@ public class CastawayCreator : Singleton<CastawayCreator>
 
     private void Update()
     {
-        if (!isPrinting)
-        {
-            SetDisplayedCard(character_SO.character_List.Count - 1);
-        }
+        //if (!isPrinting)
+        //{
+        //    SetDisplayedCard(character_SO.character_List.Count - 1);
+        //}
     }
 
 
